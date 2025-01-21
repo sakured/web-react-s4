@@ -1,0 +1,111 @@
+/************************************* GLOBAL STYLE *************************************/
+
+body {
+    /* background */
+    background: #000000;
+
+    /* fonts */
+    font-family: 'Century Gothic', 'Arial', sans-serif;
+    color: #FFFFFF;
+}
+
+/************************************* GLOBAL COLORS *************************************/
+
+.turquoise {
+    color: #00FFFF;
+}
+
+.turquoise-bd {
+    background-color: #00FFFF;
+}
+
+.pink {
+    color: #FF00FF;
+}
+
+.pink-bd {
+    background-color: #FF00FF;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+/************************************* GLOBAL SPACING *************************************/
+
+body {
+    margin: 0px;
+    padding: 0px; 
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    min-height: 70vh;
+    margin: 2rem 15%;
+}
+
+/************************************* GLOBAL DISPLACEMENT *************************************/
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+/************************************* HEADER *************************************/
+
+.header {
+    border-bottom: #00FFFF solid 2px;
+    padding: 1rem;
+    padding: 2rem 15%;
+}
+
+.header img {
+    height: 70px;
+}
+
+.header p {
+    margin-left: 5rem;
+}
+
+.header p:hover {
+    color: #FF00FF;
+}
+
+/************************************* FOOTER *************************************/
+
+.footer {
+    border-top: #00FFFF solid 2px;
+    padding: 2rem;
+}
+
+.footer p:hover {
+    text-decoration: underline;
+}
