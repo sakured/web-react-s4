@@ -1,22 +1,15 @@
 import ArtistCard from './../components/ArtistCard.jsx'
+import FilterBanner from './../components/FilterBanner.jsx'
+import ArtistData from './../../database/artist.json'
 
 export default function Home() {
     return (
       <div className="content">
-        <h1 className="center">FIND YOUR VIBE</h1>
+        <FilterBanner />
         <div className="wrap space-between">
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
-          <ArtistCard />
+          {ArtistData.map(artist => {
+            return <ArtistCard artistImg={artist.picture_big} artistName={artist.name} />
+          })}
         </div>
       </div>
     )

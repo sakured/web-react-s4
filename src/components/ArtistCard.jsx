@@ -1,23 +1,21 @@
-export default function ArtistCard() {
+export default function ArtistCard({artistImg, artistName}) {
     return (
-      <div style={artistCardStyle}>
-        <p>Artist Name</p>
-        <p>Name</p>
-        <p>Artist</p>
+      <div class="flex-column justify-center align-center" style={artistCardStyle}>
+        <div class="img-container">
+          <img src={artistImg} alt={artistName} style={pictureStyle}/>
+        </div>
+        <p>{artistName}</p>
       </div>
     )
   }
   
   const artistCardStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: '0rem 1rem 2rem 0rem',
-    padding: '1rem',
-    border: '#00FFFF solid 2px',
-    borderRadius: '20px',
-    width: '13rem',
-    height: '13rem'
+    margin: '0rem 0.5rem 2rem 0.5rem',
+  };
+
+  const pictureStyle = {
+    borderRadius: '10rem',
+    width: '15rem',
+    height: '15rem'
   };
   
