@@ -1,9 +1,26 @@
-export default function FilterBanner() {
+export default function FilterBanner({setSearch, setGenre}) {
+  
     return (
       <div class="flex-row center space-between align-center" style={FilterBannerStyle}>
         <div class="flex-row align-center">
-          <input type="search" placeholder="Search an artist, a song..."></input>
+          <input type="search" placeholder="Search for artists, songs..." onChange={(e) => setSearch(e.target.value)}></input>
+
+          <select onChange={(e) => setGenre(e.target.value)}>
+            <option value="all">Genre</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="rap">Rap</option>
+            <option value="hip hop">Hip hop</option>
+            <option value="dance">Dance</option>
+            <option value="electro">Electro</option>
+            <option value="folk">Folk</option>
+            <option value="french variety">French variety</option>
+            <option value="country">Country</option>
+          </select>
+
+          <img src="./heart-outlined.png" style={FavoriteButtonStyle}></img>
         </div>
+
         <div class="flex-row space-between">
           <p style={FilterTypeStyle} class="filter-type turquoise">Artist</p>
           <p style={FilterTypeStyle} class="filter-type">Album</p>
@@ -24,4 +41,10 @@ export default function FilterBanner() {
   const FilterTypeStyle = {
     margin: '0rem 1rem',
     cursor: 'pointer'
+  }
+  
+  const FavoriteButtonStyle = {
+    height: '2rem',
+    width: '2rem',
+    paddingLeft: '1rem'
   }

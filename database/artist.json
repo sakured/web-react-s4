@@ -13,7 +13,8 @@
     "nb_fan": 6549737,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/5962948/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 13011,
@@ -29,7 +30,8 @@
     "nb_fan": 2848559,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/13011/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["hip hop", "rap"]
 
   },
   {
@@ -46,7 +48,8 @@
     "nb_fan": 8355322,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/3469/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 382937,
@@ -62,7 +65,8 @@
     "nb_fan": 7153948,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/382937/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["rap", "pop"]
   },
   {
     "id": 74398,
@@ -78,7 +82,8 @@
     "nb_fan": 4139424,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/74398/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 5497121,
@@ -94,7 +99,8 @@
     "nb_fan": 1203535,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/5497121/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["rap"]
   },
   {
     "id": 259467,
@@ -110,7 +116,8 @@
     "nb_fan": 2361027,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/259467/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["rap"]
   },
   {
     "id": 1424821,
@@ -126,7 +133,8 @@
     "nb_fan": 5150100,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/1424821/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 4492087,
@@ -142,7 +150,8 @@
     "nb_fan": 1753483,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4492087/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop", "electro"]
   },
   {
     "id": 1562681,
@@ -158,7 +167,8 @@
     "nb_fan": 12878285,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/1562681/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 75491,
@@ -174,7 +184,8 @@
     "nb_fan": 8057626,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/75491/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop", "dance"]
   },
   {
     "id": 144227,
@@ -190,7 +201,8 @@
     "nb_fan": 9343158,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/144227/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 35,
@@ -206,7 +218,8 @@
     "nb_fan": 5545960,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/35/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop", "rock"]
   },
   {
     "id": 4453455,
@@ -222,7 +235,8 @@
     "nb_fan": 1732124,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4453455/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["french variety"]
   },
   {
     "id": 4803754,
@@ -238,7 +252,8 @@
     "nb_fan": 2771961,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4803754/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["french variety"]
   },
   {
     "id": 4494623,
@@ -254,7 +269,8 @@
     "nb_fan": 2433986,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4494623/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["rap", "hip hop"]
   },
   {
     "id": 126335112,
@@ -270,7 +286,8 @@
     "nb_fan": 369913,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/126335112/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 64874492,
@@ -286,7 +303,8 @@
     "nb_fan": 225745,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/64874492/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 892,
@@ -302,7 +320,8 @@
     "nb_fan": 17429501,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/892/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 12246,
@@ -318,7 +337,8 @@
     "nb_fan": 11588391,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/12246/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop", "folk", "rock", "country"]
   },
   {
     "id": 292185,
@@ -334,7 +354,8 @@
     "nb_fan": 5319761,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/292185/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 384236,
@@ -350,7 +371,8 @@
     "nb_fan": 20080235,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/384236/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 1007876,
@@ -366,7 +388,8 @@
     "nb_fan": 6371073,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/1007876/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 1176900,
@@ -382,7 +405,8 @@
     "nb_fan": 1198128,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/1176900/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 1538640,
@@ -398,7 +422,8 @@
     "nb_fan": 3670369,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/1538640/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 4429712,
@@ -414,7 +439,8 @@
     "nb_fan": 5196691,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4429712/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["french variety"]
   },
   {
     "id": 4443465,
@@ -430,7 +456,8 @@
     "nb_fan": 101244,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4443465/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 4794264,
@@ -446,7 +473,8 @@
     "nb_fan": 980848,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4794264/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 4794265,
@@ -462,7 +490,8 @@
     "nb_fan": 835191,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4794265/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 4794268,
@@ -478,7 +507,8 @@
     "nb_fan": 1126445,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/4794268/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 5292512,
@@ -494,7 +524,8 @@
     "nb_fan": 1965929,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/5292512/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 5313805,
@@ -510,7 +541,8 @@
     "nb_fan": 1977779,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/5313805/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 9761322,
@@ -526,7 +558,8 @@
     "nb_fan": 2619477,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/9761322/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 10803980,
@@ -542,7 +575,8 @@
     "nb_fan": 2329451,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/10803980/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 11152580,
@@ -558,7 +592,8 @@
     "nb_fan": 1446410,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/11152580/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 12945219,
@@ -574,7 +609,8 @@
     "nb_fan": 85798,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/12945219/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   },
   {
     "id": 91212482,
@@ -590,7 +626,8 @@
     "nb_fan": 105773,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/91212482/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["french variety"]
   },
   {
     "id": 146543992,
@@ -606,6 +643,7 @@
     "nb_fan": 234735,
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/146543992/top?limit=50",
-    "type": "artist"
+    "type": "artist",
+    "genre": ["pop"]
   }
 ]
