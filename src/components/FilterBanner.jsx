@@ -6,16 +6,17 @@ export default function FilterBanner({setSearch, setGenre}) {
           <input type="search" placeholder="Search for artists, songs..." onChange={(e) => setSearch(e.target.value)}></input>
 
           <select onChange={(e) => setGenre(e.target.value)}>
-            <option value="all">Genre</option>
+            <option value="all">All genres</option>
             <option value="pop">Pop</option>
+            <option value="k-pop">K-pop</option>
             <option value="rock">Rock</option>
             <option value="rap">Rap</option>
             <option value="hip hop">Hip hop</option>
             <option value="dance">Dance</option>
             <option value="electro">Electro</option>
             <option value="folk">Folk</option>
-            <option value="french variety">French variety</option>
             <option value="country">Country</option>
+            <option value="french variety">French variety</option>
           </select>
 
           <img src="./heart-outlined.png" style={FavoriteButtonStyle}></img>

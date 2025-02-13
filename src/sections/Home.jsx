@@ -24,12 +24,16 @@ export default function Home() {
   return (
     <div className="content">
       <FilterBanner setSearch={setSearch} setGenre={setGenre}/>
+      
       <div className="wrap justify-center">
 
-        {/* ARTISTS */}
-        {filteredArtists.map(artist => {
-          return <ArtistCard artistImg={artist.picture_big} artistName={artist.name} />
-        })}
+        {filteredArtists.length === 0 ? (
+          <p>No artist found</p>
+        ) : (
+          filteredArtists.map(artist => (
+            <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
+          ))
+        )}
 
       </div>
     </div>

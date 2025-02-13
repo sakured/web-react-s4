@@ -287,7 +287,7 @@
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/126335112/top?limit=50",
     "type": "artist",
-    "genre": ["pop"]
+    "genre": ["pop", "k-pop"]
   },
   {
     "id": 64874492,
@@ -576,7 +576,7 @@
     "radio": true,
     "tracklist": "https://api.deezer.com/artist/10803980/top?limit=50",
     "type": "artist",
-    "genre": ["pop"]
+    "genre": ["pop", "k-pop"]
   },
   {
     "id": 11152580,
@@ -645,5 +645,22 @@
     "tracklist": "https://api.deezer.com/artist/146543992/top?limit=50",
     "type": "artist",
     "genre": ["pop"]
-  }
+  },
+  {
+    "id": 4050205,
+    "name": "The Weeknd",
+    "link": "https://www.deezer.com/artist/4050205",
+    "share": "https://www.deezer.com/artist/4050205?utm_source=deezer&utm_content=artist-4050205&utm_term=0_1737995245&utm_medium=web",
+    "picture": "https://api.deezer.com/artist/4050205/image",
+    "picture_small": "https://cdn-images.dzcdn.net/images/artist/581693b4724a7fcfa754455101e13a44/500x500-000000-80-0-0.jpgjpg",
+    "picture_big": "https://e-cdns-images.dzcdn.net/images/artist/581693b4724a7fcfa754455101e13a44/500x500-000000-80-0-0.jpg",
+    "picture_xl": "https://e-cdns-images.dzcdn.net/images/artist/581693b4724a7fcfa754455101e13a44/1000x1000-000000-80-0-0.jpg",
+    "nb_album": 10,
+    "nb_fan": 15000000,
+    "radio": true,
+    "tracklist": "https://api.deezer.com/artist/4050205/top?limit=50",
+    "type": "artist",
+    "genre": ["pop", "dance", "electro"]
+}
+
 ]
