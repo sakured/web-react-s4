@@ -1367,28 +1367,6 @@
         ]
     },
     {
-        "id": 7927592,
-        "title": "1000 Forms Of Fear",
-        "link": "https://www.deezer.com/album/7927592",
-        "cover": "https://api.deezer.com/album/7927592/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/4275db12f5e284b3c2f3e20726187b64/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/4275db12f5e284b3c2f3e20726187b64/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/4275db12f5e284b3c2f3e20726187b64/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/4275db12f5e284b3c2f3e20726187b64/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "4275db12f5e284b3c2f3e20726187b64",
-        "genre_id": 132,
-        "fans": 250843,
-        "release_date": "2014-07-04",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/7927592/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Sia",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
         "id": 8916799,
         "title": "1000 Forms Of Fear",
         "link": "https://www.deezer.com/album/8916799",
@@ -1767,29 +1745,6 @@
         ]
     },
     {
-        "id": 368759117,
-        "title": "Queen Radio: Volume 1",
-        "link": "https://www.deezer.com/album/368759117",
-        "cover": "https://api.deezer.com/album/368759117/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/441d8c3c48fcdd1d3fd8b78e2ad4f459/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/441d8c3c48fcdd1d3fd8b78e2ad4f459/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/441d8c3c48fcdd1d3fd8b78e2ad4f459/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/441d8c3c48fcdd1d3fd8b78e2ad4f459/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "441d8c3c48fcdd1d3fd8b78e2ad4f459",
-        "genre_id": 116,
-        "fans": 1080,
-        "release_date": "2022-10-25",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/368759117/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Nicki Minaj",
-        "genre": [
-            "rap",
-            "pop"
-        ]
-    },
-    {
         "id": 230155152,
         "title": "Beam Me Up Scotty",
         "link": "https://www.deezer.com/album/230155152",
@@ -1951,29 +1906,6 @@
         ]
     },
     {
-        "id": 49147422,
-        "title": "Pink Friday ... Roman Reloaded (Deluxe Edition)",
-        "link": "https://www.deezer.com/album/49147422",
-        "cover": "https://api.deezer.com/album/49147422/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/b2698294952de0bff688953aa3d91ad1/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/b2698294952de0bff688953aa3d91ad1/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/b2698294952de0bff688953aa3d91ad1/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/b2698294952de0bff688953aa3d91ad1/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "b2698294952de0bff688953aa3d91ad1",
-        "genre_id": 116,
-        "fans": 20460,
-        "release_date": "2012-01-01",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/49147422/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Nicki Minaj",
-        "genre": [
-            "rap",
-            "pop"
-        ]
-    },
-    {
         "id": 2732901,
         "title": "Pink Friday ... Roman Reloaded (Deluxe)",
         "link": "https://www.deezer.com/album/2732901",
@@ -2035,29 +1967,6 @@
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/49145872/tracks",
         "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Nicki Minaj",
-        "genre": [
-            "rap",
-            "pop"
-        ]
-    },
-    {
-        "id": 186080222,
-        "title": "Pink Friday (Complete Edition)",
-        "link": "https://www.deezer.com/album/186080222",
-        "cover": "https://api.deezer.com/album/186080222/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/93c7ca2b54d614843dfe7658106eed69/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/93c7ca2b54d614843dfe7658106eed69/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/93c7ca2b54d614843dfe7658106eed69/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/93c7ca2b54d614843dfe7658106eed69/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "93c7ca2b54d614843dfe7658106eed69",
-        "genre_id": 116,
-        "fans": 7613,
-        "release_date": "2020-11-20",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/186080222/tracks",
-        "explicit_lyrics": true,
         "type": "album",
         "artist": "Nicki Minaj",
         "genre": [
@@ -2353,50 +2262,6 @@
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/253669142/tracks",
         "explicit_lyrics": false,
-        "type": "album",
-        "artist": "OneRepublic",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "id": 178497472,
-        "title": "CLOUDS (Music From The Disney+ Original Movie)",
-        "link": "https://www.deezer.com/album/178497472",
-        "cover": "https://api.deezer.com/album/178497472/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/30c01803770c60f2893cea62140ef9ea/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/30c01803770c60f2893cea62140ef9ea/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/30c01803770c60f2893cea62140ef9ea/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/30c01803770c60f2893cea62140ef9ea/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "30c01803770c60f2893cea62140ef9ea",
-        "genre_id": 173,
-        "fans": 3921,
-        "release_date": "2020-10-16",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/178497472/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "OneRepublic",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "id": 63571272,
-        "title": "13 Reasons Why (Season 2)",
-        "link": "https://www.deezer.com/album/63571272",
-        "cover": "https://api.deezer.com/album/63571272/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/19b14fa5b494e0e74332f7dbf8dab87d/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/19b14fa5b494e0e74332f7dbf8dab87d/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/19b14fa5b494e0e74332f7dbf8dab87d/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/19b14fa5b494e0e74332f7dbf8dab87d/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "19b14fa5b494e0e74332f7dbf8dab87d",
-        "genre_id": 173,
-        "fans": 61031,
-        "release_date": "2018-05-18",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/63571272/tracks",
-        "explicit_lyrics": true,
         "type": "album",
         "artist": "OneRepublic",
         "genre": [
@@ -2814,28 +2679,6 @@
         "release_date": "2022-06-23",
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/328094737/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Bigflo & Oli",
-        "genre": [
-            "rap"
-        ]
-    },
-    {
-        "id": 333057837,
-        "title": "Les autres c’est nous",
-        "link": "https://www.deezer.com/album/333057837",
-        "cover": "https://api.deezer.com/album/333057837/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/cf5b3c8f8731b2c306e128c910b66575/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/cf5b3c8f8731b2c306e128c910b66575/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/cf5b3c8f8731b2c306e128c910b66575/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/cf5b3c8f8731b2c306e128c910b66575/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "cf5b3c8f8731b2c306e128c910b66575",
-        "genre_id": 116,
-        "fans": 28665,
-        "release_date": "2022-07-11",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/333057837/tracks",
         "explicit_lyrics": true,
         "type": "album",
         "artist": "Bigflo & Oli",
@@ -3878,28 +3721,6 @@
         ]
     },
     {
-        "id": 670229061,
-        "title": "Born To Die",
-        "link": "https://www.deezer.com/album/670229061",
-        "cover": "https://api.deezer.com/album/670229061/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/1bc26f716147530c5d86d5ca819710c2/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/1bc26f716147530c5d86d5ca819710c2/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/1bc26f716147530c5d86d5ca819710c2/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/1bc26f716147530c5d86d5ca819710c2/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "1bc26f716147530c5d86d5ca819710c2",
-        "genre_id": 85,
-        "fans": 469,
-        "release_date": "2024-11-15",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/670229061/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Lana Del Rey",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
         "id": 1503218,
         "title": "Born To Die",
         "link": "https://www.deezer.com/album/1503218",
@@ -3958,28 +3779,6 @@
         "release_date": "2012-11-16",
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/141901702/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Lana Del Rey",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "id": 1707676,
-        "title": "Born To Die",
-        "link": "https://www.deezer.com/album/1707676",
-        "cover": "https://api.deezer.com/album/1707676/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/4c2c6143c3e83a01ea73517c57d1d138/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/4c2c6143c3e83a01ea73517c57d1d138/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/4c2c6143c3e83a01ea73517c57d1d138/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/4c2c6143c3e83a01ea73517c57d1d138/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "4c2c6143c3e83a01ea73517c57d1d138",
-        "genre_id": 152,
-        "fans": 61392,
-        "release_date": "2012-04-16",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/1707676/tracks",
         "explicit_lyrics": true,
         "type": "album",
         "artist": "Lana Del Rey",
@@ -5357,29 +5156,6 @@
         ]
     },
     {
-        "id": 321440247,
-        "title": "Top Gun: Maverick (Music From The Motion Picture)",
-        "link": "https://www.deezer.com/album/321440247",
-        "cover": "https://api.deezer.com/album/321440247/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/c86f870a3ea8782da239a9dd10315cdc/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/c86f870a3ea8782da239a9dd10315cdc/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/c86f870a3ea8782da239a9dd10315cdc/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/c86f870a3ea8782da239a9dd10315cdc/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "c86f870a3ea8782da239a9dd10315cdc",
-        "genre_id": 173,
-        "fans": 47580,
-        "release_date": "2022-05-27",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/321440247/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Lady Gaga",
-        "genre": [
-            "pop",
-            "dance"
-        ]
-    },
-    {
         "id": 262383752,
         "title": "Love For Sale (Deluxe)",
         "link": "https://www.deezer.com/album/262383752",
@@ -5716,29 +5492,6 @@
         "release_date": "2009-01-01",
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/433789/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Lady Gaga",
-        "genre": [
-            "pop",
-            "dance"
-        ]
-    },
-    {
-        "id": 107876612,
-        "title": "The Fame Monster (Deluxe Edition)",
-        "link": "https://www.deezer.com/album/107876612",
-        "cover": "https://api.deezer.com/album/107876612/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/62f368993ddb68c5364cd03221d07ac6/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/62f368993ddb68c5364cd03221d07ac6/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/62f368993ddb68c5364cd03221d07ac6/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/62f368993ddb68c5364cd03221d07ac6/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "62f368993ddb68c5364cd03221d07ac6",
-        "genre_id": 132,
-        "fans": 1566,
-        "release_date": "2009-11-23",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/107876612/tracks",
         "explicit_lyrics": false,
         "type": "album",
         "artist": "Lady Gaga",
@@ -6643,29 +6396,6 @@
         ]
     },
     {
-        "id": 230354,
-        "title": "Under My Skin",
-        "link": "https://www.deezer.com/album/230354",
-        "cover": "https://api.deezer.com/album/230354/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/16d5095c1fb8147a748b578786a44674/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/16d5095c1fb8147a748b578786a44674/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/16d5095c1fb8147a748b578786a44674/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/16d5095c1fb8147a748b578786a44674/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "16d5095c1fb8147a748b578786a44674",
-        "genre_id": 132,
-        "fans": 8636,
-        "release_date": "2004-05-24",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/230354/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Avril Lavigne",
-        "genre": [
-            "pop",
-            "rock"
-        ]
-    },
-    {
         "id": 1443427,
         "title": "Under My Skin",
         "link": "https://www.deezer.com/album/1443427",
@@ -7099,28 +6829,6 @@
         ]
     },
     {
-        "id": 678916081,
-        "title": "solo",
-        "link": "https://www.deezer.com/album/678916081",
-        "cover": "https://api.deezer.com/album/678916081/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/706be7f27061eb915c46e64f86e2db64/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/706be7f27061eb915c46e64f86e2db64/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/706be7f27061eb915c46e64f86e2db64/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/706be7f27061eb915c46e64f86e2db64/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "706be7f27061eb915c46e64f86e2db64",
-        "genre_id": 132,
-        "fans": 632,
-        "release_date": "2024-12-05",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/678916081/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Louane",
-        "genre": [
-            "french variety"
-        ]
-    },
-    {
         "id": 684769811,
         "title": "solo",
         "link": "https://www.deezer.com/album/684769811",
@@ -7407,28 +7115,6 @@
         ]
     },
     {
-        "id": 565300442,
-        "title": "Chambre 12",
-        "link": "https://www.deezer.com/album/565300442",
-        "cover": "https://api.deezer.com/album/565300442/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/abbb98df5068b186f0b58816f3a921b4/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/abbb98df5068b186f0b58816f3a921b4/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/abbb98df5068b186f0b58816f3a921b4/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/abbb98df5068b186f0b58816f3a921b4/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "abbb98df5068b186f0b58816f3a921b4",
-        "genre_id": 132,
-        "fans": 1041,
-        "release_date": "2024-03-29",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/565300442/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Louane",
-        "genre": [
-            "french variety"
-        ]
-    },
-    {
         "id": 651275671,
         "title": "foudre",
         "link": "https://www.deezer.com/album/651275671",
@@ -7583,50 +7269,6 @@
         ]
     },
     {
-        "id": 550514972,
-        "title": "HÉRITAGE",
-        "link": "https://www.deezer.com/album/550514972",
-        "cover": "https://api.deezer.com/album/550514972/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "89cb140366926fa73fcc00309f44a7b8",
-        "genre_id": 116,
-        "fans": 6527,
-        "release_date": "2024-02-20",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/550514972/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Dadju",
-        "genre": [
-            "french variety"
-        ]
-    },
-    {
-        "id": 580238711,
-        "title": "HÉRITAGE",
-        "link": "https://www.deezer.com/album/580238711",
-        "cover": "https://api.deezer.com/album/580238711/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/89cb140366926fa73fcc00309f44a7b8/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "89cb140366926fa73fcc00309f44a7b8",
-        "genre_id": 116,
-        "fans": 28747,
-        "release_date": "2024-05-02",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/580238711/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Dadju",
-        "genre": [
-            "french variety"
-        ]
-    },
-    {
         "id": 492914841,
         "title": "Cullinan : La Gelée Royale",
         "link": "https://www.deezer.com/album/492914841",
@@ -7685,28 +7327,6 @@
         "release_date": "2021-06-02",
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/234054762/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Dadju",
-        "genre": [
-            "french variety"
-        ]
-    },
-    {
-        "id": 280925691,
-        "title": "Poison ou Antidote (Miel Book Edition)",
-        "link": "https://www.deezer.com/album/280925691",
-        "cover": "https://api.deezer.com/album/280925691/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/bdda644ec4fca3d3c10425b7091fa74d/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/bdda644ec4fca3d3c10425b7091fa74d/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/bdda644ec4fca3d3c10425b7091fa74d/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/bdda644ec4fca3d3c10425b7091fa74d/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "bdda644ec4fca3d3c10425b7091fa74d",
-        "genre_id": 165,
-        "fans": 8714,
-        "release_date": "2021-12-16",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/280925691/tracks",
         "explicit_lyrics": false,
         "type": "album",
         "artist": "Dadju",
@@ -8815,50 +8435,6 @@
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/657452321/tracks",
         "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Gracie Abrams",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "id": 660654081,
-        "title": "The Secret of Us (Deluxe)",
-        "link": "https://www.deezer.com/album/660654081",
-        "cover": "https://api.deezer.com/album/660654081/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/205452d5994e408572abf2d49481a057/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/205452d5994e408572abf2d49481a057/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/205452d5994e408572abf2d49481a057/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/205452d5994e408572abf2d49481a057/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "205452d5994e408572abf2d49481a057",
-        "genre_id": 132,
-        "fans": 247,
-        "release_date": "2024-10-22",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/660654081/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Gracie Abrams",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "id": 648680371,
-        "title": "The Secret of Us",
-        "link": "https://www.deezer.com/album/648680371",
-        "cover": "https://api.deezer.com/album/648680371/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/7a3896b14e27e9c77adc7deeb69d2a89/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/7a3896b14e27e9c77adc7deeb69d2a89/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/7a3896b14e27e9c77adc7deeb69d2a89/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/7a3896b14e27e9c77adc7deeb69d2a89/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "7a3896b14e27e9c77adc7deeb69d2a89",
-        "genre_id": 132,
-        "fans": 206,
-        "release_date": "2024-09-26",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/648680371/tracks",
-        "explicit_lyrics": false,
         "type": "album",
         "artist": "Gracie Abrams",
         "genre": [
@@ -11730,50 +11306,6 @@
         ]
     },
     {
-        "id": 416007627,
-        "title": "emails i can’t send fwd:",
-        "link": "https://www.deezer.com/album/416007627",
-        "cover": "https://api.deezer.com/album/416007627/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/7aaba890ad0aa01f1e809578ad926322/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/7aaba890ad0aa01f1e809578ad926322/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/7aaba890ad0aa01f1e809578ad926322/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/7aaba890ad0aa01f1e809578ad926322/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "7aaba890ad0aa01f1e809578ad926322",
-        "genre_id": 132,
-        "fans": 13779,
-        "release_date": "2023-03-17",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/416007627/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Sabrina Carpenter",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "id": 418984657,
-        "title": "emails i can’t send fwd:",
-        "link": "https://www.deezer.com/album/418984657",
-        "cover": "https://api.deezer.com/album/418984657/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/402f03d0eaa8a5464d967be9f34501df/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/402f03d0eaa8a5464d967be9f34501df/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/402f03d0eaa8a5464d967be9f34501df/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/402f03d0eaa8a5464d967be9f34501df/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "402f03d0eaa8a5464d967be9f34501df",
-        "genre_id": 132,
-        "fans": 291,
-        "release_date": "2023-03-20",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/418984657/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Sabrina Carpenter",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
         "id": 178497472,
         "title": "CLOUDS (Music From The Disney+ Original Movie)",
         "link": "https://www.deezer.com/album/178497472",
@@ -12800,50 +12332,6 @@
         "release_date": "2024-09-13",
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/638959331/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "GIMS",
-        "genre": [
-            "french variety"
-        ]
-    },
-    {
-        "id": 648143221,
-        "title": "LE NORD SE SOUVIENT",
-        "link": "https://www.deezer.com/album/648143221",
-        "cover": "https://api.deezer.com/album/648143221/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "71e84fb925edb55d50065548676ac54d",
-        "genre_id": 116,
-        "fans": 3180,
-        "release_date": "2024-09-26",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/648143221/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "GIMS",
-        "genre": [
-            "french variety"
-        ]
-    },
-    {
-        "id": 673278671,
-        "title": "LE NORD SE SOUVIENT",
-        "link": "https://www.deezer.com/album/673278671",
-        "cover": "https://api.deezer.com/album/673278671/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/71e84fb925edb55d50065548676ac54d/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "71e84fb925edb55d50065548676ac54d",
-        "genre_id": 116,
-        "fans": 2633,
-        "release_date": "2024-11-21",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/673278671/tracks",
         "explicit_lyrics": false,
         "type": "album",
         "artist": "GIMS",
@@ -15514,28 +15002,6 @@
         ]
     },
     {
-        "id": 663645311,
-        "title": "The Great Impersonator",
-        "link": "https://www.deezer.com/album/663645311",
-        "cover": "https://api.deezer.com/album/663645311/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/4d22104e61f36913c7de4502423faf72/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/4d22104e61f36913c7de4502423faf72/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/4d22104e61f36913c7de4502423faf72/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/4d22104e61f36913c7de4502423faf72/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "4d22104e61f36913c7de4502423faf72",
-        "genre_id": 85,
-        "fans": 813,
-        "release_date": "2024-10-31",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/663645311/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Halsey",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
         "id": 330154267,
         "title": "hopeless fountain kingdom (Live From Webster Hall)",
         "link": "https://www.deezer.com/album/330154267",
@@ -15660,28 +15126,6 @@
         "release_date": "2020-09-29",
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/175153222/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "Halsey",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "id": 58870592,
-        "title": "hopeless fountain kingdom (Deluxe Plus)",
-        "link": "https://www.deezer.com/album/58870592",
-        "cover": "https://api.deezer.com/album/58870592/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/d0a6a23eddef45b14563ffbab8f7717b/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/d0a6a23eddef45b14563ffbab8f7717b/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/d0a6a23eddef45b14563ffbab8f7717b/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/d0a6a23eddef45b14563ffbab8f7717b/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "d0a6a23eddef45b14563ffbab8f7717b",
-        "genre_id": 85,
-        "fans": 808,
-        "release_date": "2018-03-15",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/58870592/tracks",
         "explicit_lyrics": true,
         "type": "album",
         "artist": "Halsey",
@@ -18479,28 +17923,6 @@
         ]
     },
     {
-        "id": 642622891,
-        "title": "Fireworks & Rollerblades",
-        "link": "https://www.deezer.com/album/642622891",
-        "cover": "https://api.deezer.com/album/642622891/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/164fa29b11c222ba65e8450775b022ed/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/164fa29b11c222ba65e8450775b022ed/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/164fa29b11c222ba65e8450775b022ed/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/164fa29b11c222ba65e8450775b022ed/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "164fa29b11c222ba65e8450775b022ed",
-        "genre_id": 132,
-        "fans": 4937,
-        "release_date": "2024-07-26",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/642622891/tracks",
-        "explicit_lyrics": false,
-        "type": "album",
-        "artist": "Benson Boone",
-        "genre": [
-            "pop"
-        ]
-    },
-    {
         "id": 560451292,
         "title": "Fireworks & Rollerblades",
         "link": "https://www.deezer.com/album/560451292",
@@ -19167,30 +18589,6 @@
         "release_date": "2020-04-03",
         "record_type": "album",
         "tracklist": "https://api.deezer.com/album/139881992/tracks",
-        "explicit_lyrics": true,
-        "type": "album",
-        "artist": "The Weeknd",
-        "genre": [
-            "pop",
-            "dance",
-            "electro"
-        ]
-    },
-    {
-        "id": 304182267,
-        "title": "After Hours (Deluxe)",
-        "link": "https://www.deezer.com/album/304182267",
-        "cover": "https://api.deezer.com/album/304182267/image",
-        "cover_small": "https://cdn-images.dzcdn.net/images/cover/b5d7b0054e47ae579716bc251c4b08ae/56x56-000000-80-0-0.jpg",
-        "cover_medium": "https://cdn-images.dzcdn.net/images/cover/b5d7b0054e47ae579716bc251c4b08ae/250x250-000000-80-0-0.jpg",
-        "cover_big": "https://cdn-images.dzcdn.net/images/cover/b5d7b0054e47ae579716bc251c4b08ae/500x500-000000-80-0-0.jpg",
-        "cover_xl": "https://cdn-images.dzcdn.net/images/cover/b5d7b0054e47ae579716bc251c4b08ae/1000x1000-000000-80-0-0.jpg",
-        "md5_image": "b5d7b0054e47ae579716bc251c4b08ae",
-        "genre_id": 165,
-        "fans": 11571,
-        "release_date": "2022-03-21",
-        "record_type": "album",
-        "tracklist": "https://api.deezer.com/album/304182267/tracks",
         "explicit_lyrics": true,
         "type": "album",
         "artist": "The Weeknd",
