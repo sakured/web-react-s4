@@ -12,10 +12,12 @@ export default function AlbumCard({albumImg, albumName, artistName}) {
   
   const albumCardStyle = {
     margin: '0rem 0.5rem 2rem 0.5rem',
+    width: '12rem',
+    flexWrap: 'no-wrap',
+    textOverflow: 'hidden'
   };
 
   const pictureStyle = {
-    width: '10rem',
-    height: '10rem'
+    width: '12rem',
+    height: '12rem'
   };
-  

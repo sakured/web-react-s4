@@ -49,6 +49,17 @@ h1 {
     margin: 3rem;
 }
 
+#albums p {
+    margin: 0.2rem;
+    text-align: center;
+    height: 1.1rem;
+    text-overflow: ellipsis;
+}
+
+#albums {
+    text-overflow: hidden;
+}
+
 /************************************* GLOBAL DISPLACEMENT *************************************/
 
 .flex-row {

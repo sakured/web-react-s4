@@ -22,6 +22,19 @@ export default function Home() {
     }
     return ArtistsAfterFilter.sort((a, b) => a.name.localeCompare(b.name));
   }, [search, genre]);
+
+  /* FILTERED ALBUMS */
+  const filteredAlbums = useMemo(() => {
+    let AlbumsAfterFilter = AlbumData.filter(album => {
+      return album.title.toLowerCase().includes(search.toLowerCase());
+    })
+    if(genre) {
+      AlbumsAfterFilter = AlbumsAfterFilter.filter(album => {
+        return album.genre.includes(genre) || genre === 'all';
+      })
+    }
+    return AlbumsAfterFilter.sort((a, b) => a.title.localeCompare(b.title));
+  }, [search, genre]);
   
 
   return (
@@ -29,7 +42,6 @@ export default function Home() {
       <FilterBanner setSearch={setSearch} setGenre={setGenre}/>
 
       <div className="wrap justify-center" id="artists">
-
         {filteredArtists.length === 0 ? (
           <p>No artist found</p>
         ) : (
@@ -37,15 +49,17 @@ export default function Home() {
             <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
           ))
         )}
-
       </div>
 
 
       <div className="wrap justify-center" id="albums">
-        {AlbumData.map(album => ((album.record_type === 'album') ? (
+        {filteredAlbums.length === 0 ? (
+          <p>No album found</p>
+        ) : (
+          filteredAlbums.map(album => (
             <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
-          ) : null
-        ))}
+          ))
+        )}
       </div>
     </div>
   )
