@@ -1,6 +1,8 @@
 import ArtistCard from './../components/ArtistCard.jsx'
 import AlbumCard from './../components/AlbumCard.jsx'
 import SongCard from './../components/SongCard.jsx'
+import TopAlbums from './../components/TopAlbums.jsx'
+import TopSongs from './../components/TopSongs.jsx'
 import FilterBanner from './../components/FilterBanner.jsx'
 import ArtistData from './../../database/artist.json'
 import AlbumData from './../../database/albums.json'
@@ -9,7 +11,7 @@ import { useState, useMemo } from 'react';
 
 export default function Home() {
   const [search, setSearch] = useState('');
-  const [genre, setGenre] = useState('');
+  const [genre, setGenre] = useState('all');
 
   /* FILTERED ARTISTS */
   const filteredArtists = useMemo(() => {
@@ -69,10 +71,11 @@ export default function Home() {
       <div className="wrap justify-center" id="albums">
         {filteredAlbums.length === 0 ? (
           <p>No album found</p>
-        ) : (
-          filteredAlbums.map(album => (
+        ) : ( (search.length === 0 && genre === 'all') ? (
+            <TopAlbums/>
+          ) : ( filteredAlbums.map(album => (
             <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
-          ))
+          )))
         )}
       </div>
 
@@ -80,10 +83,11 @@ export default function Home() {
       <div className="wrap justify-center flex-column" id="songs">
         {filteredSongs.length === 0 ? (
           <p>No song found</p>
-        ) : (
-          filteredSongs.map(song => (
+        ) : ( (search.length === 0 && genre === 'all') ? (
+              <TopSongs/>
+          ) : ( filteredSongs.map(song => (
             <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} />
-          ))
+          )))
         )}
       </div>
     </div>

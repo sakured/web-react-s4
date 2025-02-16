@@ -1,7 +1,7 @@
 export default function ArtistCard({artistImg, artistName}) {
     return (
-      <div class="flex-column justify-center align-center" style={artistCardStyle}>
-        <div class="img-container">
+      <div className="flex-column justify-center align-center" style={artistCardStyle}>
+        <div className="img-container">
           <img src={artistImg} alt={artistName} style={pictureStyle}/>
         </div>
         <p>{artistName}</p>

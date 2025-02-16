@@ -1,7 +1,7 @@
 export default function AlbumCard({albumImg, albumName, artistName}) {
     return (
-      <div class="flex-column justify-center align-center" style={albumCardStyle}>
-        <div class="img-container">
+      <div className="flex-column justify-center align-center" style={albumCardStyle}>
+        <div className="img-container">
           <img src={albumImg} alt={albumName} style={pictureStyle}/>
         </div>
         <p><strong>{albumName}</strong></p>
