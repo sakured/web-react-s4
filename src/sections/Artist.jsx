@@ -48,7 +48,7 @@ export default function Artist({artist}) {
 
         <div style={albumsStyle} className='flex-row space-between align-center'>
           <h2>Albums</h2>
-          <div className="line"></div>
+          <div className="line" style={{marginLeft: '1rem'}}></div>
           <select onChange={(e) => setFilter(e.target.value)} style={selectStyle}>
             <option value="date">Release date</option>
             <option value="az">A - Z</option>

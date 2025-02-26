@@ -24,11 +24,37 @@ const tay = JSON.stringify(
     "genre": ["pop", "folk", "rock", "country"]
   })
 
+const rep = JSON.stringify(
+  {
+    "id": 52612062,
+    "title": "reputation",
+    "link": "https://www.deezer.com/album/52612062",
+    "cover": "https://api.deezer.com/album/52612062/image",
+    "cover_small": "https://cdn-images.dzcdn.net/images/cover/e6f3afd8a5c3d8ea797f458694166e47/56x56-000000-80-0-0.jpg",
+    "cover_medium": "https://cdn-images.dzcdn.net/images/cover/e6f3afd8a5c3d8ea797f458694166e47/250x250-000000-80-0-0.jpg",
+    "cover_big": "https://cdn-images.dzcdn.net/images/cover/e6f3afd8a5c3d8ea797f458694166e47/500x500-000000-80-0-0.jpg",
+    "cover_xl": "https://cdn-images.dzcdn.net/images/cover/e6f3afd8a5c3d8ea797f458694166e47/1000x1000-000000-80-0-0.jpg",
+    "md5_image": "e6f3afd8a5c3d8ea797f458694166e47",
+    "genre_id": 132,
+    "fans": 223743,
+    "release_date": "2017-11-17",
+    "record_type": "album",
+    "tracklist": "https://api.deezer.com/album/52612062/tracks",
+    "explicit_lyrics": false,
+    "type": "album",
+    "artist": "Taylor Swift",
+    "genre": [
+        "pop",
+        "rock",
+        "electro"
+    ]
+})
+
 export default function App() {
   return (
     <main>
       <Artist artist={tay}/>
-      {/* <Album /> */}
+      <Album album={rep} artist={tay}/>
       {/* <Home /> */}
     </main>
   )
