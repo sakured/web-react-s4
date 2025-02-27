@@ -51,10 +51,8 @@ export default function Album({album, artist}) {
 
         <div id="songs" className='flex-column space-between' style={{marginBottom:'3rem'}}>
           {songs.map(song => (
-            // <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} />
             <div id="songs" className="flex-row space-between align-center" >
               <p style={songTitleStyle}>{song.track_position}. {song.title}</p>
-              {/* <video controls autoplay name="media"><source src={song.preview} type="audio/mpeg"/></video> */}
               <div className='flex-row space-between align-center' style={tableStyle}>
                 <p>{Math.floor(song.duration/60)}:{(song.duration % 60).toString().padStart(2, '0')}</p>
                 <img src="./heart-outlined.png" style={favoriteStyle}></img>

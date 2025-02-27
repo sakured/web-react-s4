@@ -266,6 +266,14 @@ img:hover {
         align-self: center;
         margin-right: 0rem !important;
     }
+
+    /******* SONG CARD *******/
+    p.nonable {
+        display: none;
+    }
+    #songs > div > p {
+        width: 100% !important;
+    }
 }
 
 @media all and (max-width: 1040px) {

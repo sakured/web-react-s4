@@ -1,6 +1,7 @@
 import ArtistCard from './../components/ArtistCard.jsx'
 import AlbumCard from './../components/AlbumCard.jsx'
 import SongCard from './../components/SongCard.jsx'
+import SongCardTitle from './../components/SongCardTitle.jsx'
 import TopAlbums from './../components/TopAlbums.jsx'
 import TopSongs from './../components/TopSongs.jsx'
 import FilterBanner from './../components/FilterBanner.jsx'
@@ -79,19 +80,23 @@ export default function Home() {
         )}
       </div>
 
+      {filteredSongs.length === 0 ? (
+          <SongCardTitle />
+        ) : ( (search.length != 0 || genre != 'all') ? (
+            <SongCardTitle />
+          ) : <p></p>
+        )}
 
-      <div className="wrap justify-center flex-column" id="songs">
+      <div className="flex-column" id="songs">
         {filteredSongs.length === 0 ? (
-          <p>No song found</p>
+          <p className='center'>No song found</p>
         ) : ( (search.length === 0 && genre === 'all') ? (
               <TopSongs/>
           ) : ( filteredSongs.map(song => (
-            <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} />
+            <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} songDuration={song.duration} />
           )))
         )}
       </div>
     </div>
   )
 }
-  
-  
