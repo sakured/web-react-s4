@@ -34,7 +34,6 @@ export default function FilterBanner({setSearch, setGenre}) {
   const FilterBannerStyle = {
     padding: '1rem',
     marginBottom: '4rem',
-    marginRight: '1rem',
     border: '#FF00FF solid 2px',
     height: '3rem'
   };

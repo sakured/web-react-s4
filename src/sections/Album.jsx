@@ -20,13 +20,13 @@ export default function Album({album, artist}) {
     /* DISPLAY ELEMENTS OF THE ALBUM */
     return (
       <div className="content">
-        <div className="flex-row">
+        <div id="presentation" className="flex-row">
           <img src={album.cover_big} style={coverStyle} alt={album.title}/>
 
-          <div className="flex-column justify-center">
+          <div id="presentation-text" className="flex-column justify-center">
             <h1 style={albumStyle}>{album.title}</h1>
             <a href=""><div className='flex-row align-center'> 
-              <img src={artist.picture_small} style={{height: '2.5rem', width: '2.5rem', borderRadius: '50%', marginRight: '1rem'}} alt={artist.name}/>
+              <img src={artist.picture_small} style={artistPictureStyle} alt={artist.name}/>
               <p>{album.artist}</p>
             </div></a>
             <div className="flex-row">
@@ -36,25 +36,29 @@ export default function Album({album, artist}) {
             </div>
             <p>{album.release_date}</p>
             <p style={{marginTop:'0rem'}}>{album.fans} fans</p>
-            <img src="./heart-outlined.png" style={favoriteStyle}></img>
+            <img src="./heart-outlined.png" className='favorite-logo'></img>
           </div>
         </div>
 
         <div style={songsStyle} className='flex-row space-between align-center'>
           <p style={titlesTabStyle}>Song</p>
-          <p style={titlesTabStyle}>Duration</p>
-          <p style={titlesTabStyle}>Favorite</p>
+          <div className='flex-row space-between' style={tableStyle}>
+            <img src="./clock.png" style={tableLogoStyle}></img>
+            <img src="./heart-outlined-white.png" style={tableLogoStyle}></img>
+          </div>
         </div>
         <div className="line" style={{marginBottom:'1rem'}}></div>
 
         <div id="songs" className='flex-column space-between' style={{marginBottom:'3rem'}}>
           {songs.map(song => (
             // <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} />
-            <div id="songs" className="flex-row space-between align-center">
-              <p>{song.title}</p>
+            <div id="songs" className="flex-row space-between align-center" >
+              <p style={songTitleStyle}>{song.track_position}. {song.title}</p>
               {/* <video controls autoplay name="media"><source src={song.preview} type="audio/mpeg"/></video> */}
-              <p>{song.duration}</p>
-              <img src="./heart-outlined.png" style={favoriteStyle}></img>
+              <div className='flex-row space-between align-center' style={tableStyle}>
+                <p>{Math.floor(song.duration/60)}:{(song.duration % 60).toString().padStart(2, '0')}</p>
+                <img src="./heart-outlined.png" style={favoriteStyle}></img>
+              </div>
             </div>
           ))}
         </div>
@@ -70,11 +74,19 @@ export default function Album({album, artist}) {
     margin: '0 0 1rem 0'
   }
 
+  const artistPictureStyle = {
+    height: '2.5rem', 
+    width: '2.5rem', 
+    borderRadius: '50%', 
+    marginRight: '1rem'
+  }
+
   const coverStyle = {
     height: '18rem',
     width: '18rem',
     marginRight: '3rem',
-    marginTop: '1rem'
+    marginTop: '1rem',
+    cursor: 'default'
   }
 
   const genreStyle = {
@@ -83,19 +95,41 @@ export default function Album({album, artist}) {
     textTransform: 'capitalize'
   }
 
+  const songsStyle = {
+    marginTop: '3rem',
+    marginBottom: '1rem'
+  }
+
   const titlesTabStyle = {
     fontSize: '17px',
     fontWeight: 'bold',
     textTransform: 'uppercase',
-    marginBottom: '0.3rem'
+    marginBottom: '0.3rem',
+    textAlign: 'center'
+  }
+
+  const tableLogoStyle = {
+    height: '1.8rem',
+    width: '1.8rem',
+    cursor: 'default'
+  }
+
+  const songTitleStyle = {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    display: 'block', 
+    width: '100% !important',
+    paddingRight: '1rem'
+  };
+
+  const tableStyle = {
+    width: '12%',
+    minWidth: '5em',
+    maxWidth: '20rem'
   }
 
   const favoriteStyle = {
-    height: '2rem',
-    width: '2rem'
-  }
-
-  const songsStyle = {
-    marginTop: '3rem',
-    marginBottom: '1rem'
+    height: '1.8rem',
+    width: '1.8rem'
   }

@@ -64,14 +64,9 @@ h2 {
 }
 
 #albums p {
-    margin: 0.2rem;
+    margin: 0.1rem;
     text-align: center;
-    height: 1.1rem;
     text-overflow: ellipsis;
-}
-
-#albums {
-    text-overflow: hidden;
 }
 
 h1 {
@@ -158,6 +153,11 @@ h1 {
     color: #FF00FF;
 }
 
+.favorite-logo {
+    height: 2rem;
+    width: 2rem;
+}
+
 input[type="search"],
 select {
     background: black;
@@ -198,20 +198,6 @@ select {
     margin-left: 1rem;
     width: 10rem;
 }
-
-/* input[type="checkbox"] {
-    margin-left: 1rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 2px solid #00FFFF;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-}
-
-label {
-    margin-left: .5rem;
-} */
 
 /************************************* ARTIST CARD *************************************/
 
@@ -267,6 +253,19 @@ img:hover {
     #menu p {
         margin: 30px 30px 0px 30px;
     }
+
+    /******* ARTIST & ALBUM PAGE *******/
+    #presentation {
+        flex-direction: column;
+    }
+    #presentation-text {
+        align-items: center;
+        margin-top: 1rem;
+    }
+    #presentation > img {
+        align-self: center;
+        margin-right: 0rem !important;
+    }
 }
 
 @media all and (max-width: 1040px) {
@@ -293,5 +292,12 @@ img:hover {
     }
     #element-type-filter {
         margin: 30px 0 5px 0;
+    }
+}
+
+@media all and (max-width: 600px) {
+    /******* ALBUMS LISTS *******/
+    #albums {
+        justify-content: center;
     }
 }

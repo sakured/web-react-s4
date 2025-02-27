@@ -4,8 +4,8 @@ export default function AlbumCard({albumImg, albumName, artistName}) {
         <div className="img-container">
           <img src={albumImg} alt={albumName} style={pictureStyle}/>
         </div>
-        <p><strong>{albumName}</strong></p>
-        <p>{artistName}</p>
+        <p style={albumText}><strong>{albumName}</strong></p>
+        <p style={albumText}>{artistName}</p>
       </div>
     )
   }
@@ -13,8 +13,15 @@ export default function AlbumCard({albumImg, albumName, artistName}) {
   const albumCardStyle = {
     margin: '0rem 0.5rem 2rem 0.5rem',
     width: '12rem',
-    flexWrap: 'no-wrap',
-    textOverflow: 'hidden'
+    flexWrap: 'no-wrap'
+  };
+
+  const albumText = {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    display: 'block', 
+    width: '100%',
   };
 
   const pictureStyle = {

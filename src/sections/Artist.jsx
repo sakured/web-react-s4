@@ -31,10 +31,10 @@ export default function Artist({artist}) {
     /* DISPLAY ELEMENTS OF THE ARTIST */
     return (
       <div className="content">
-        <div className="flex-row">
+        <div id="presentation" className="flex-row">
           <img src={artist.picture_big} style={pictureStyle} alt={artist.name}/>
 
-          <div className="flex-column justify-center">
+          <div id="presentation-text" className="flex-column justify-center">
             <h1 style={artistStyle}>{artist.name}</h1>
             <div className="flex-row">
               {artist.genre.map((genre, index) => (
@@ -42,7 +42,7 @@ export default function Artist({artist}) {
               ))}
             </div>
             <p>{artist.nb_fan} fans</p>
-            <img src="./heart-outlined.png" style={favoriteStyle}></img>
+            <img src="./heart-outlined.png" className='favorite-logo'></img>
           </div>
         </div>
 
@@ -78,17 +78,13 @@ export default function Artist({artist}) {
     width: '18rem',
     marginRight: '3rem',
     marginTop: '1rem',
-    borderRadius: '100%'
+    borderRadius: '100%',
+    cursor: 'default'
   }
 
   const genreStyle = {
     marginRight: '0.5rem',
     textTransform: 'capitalize'
-  }
-
-  const favoriteStyle = {
-    height: '2rem',
-    width: '2rem'
   }
 
   const selectStyle = {

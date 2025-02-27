@@ -55,7 +55,7 @@ export default function App() {
     <main>
       <Artist artist={tay}/>
       <Album album={rep} artist={tay}/>
-      {/* <Home /> */}
+      <Home />
     </main>
   )
 }
