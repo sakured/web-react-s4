@@ -1,7 +1,7 @@
 import Home from './sections/Home.jsx'
 import Artist from './sections/Artist.jsx'
 import Album from './sections/Album.jsx'
-import Wishlist from './sections/Wishlist.jsx'
+import Favorites from './sections/Favorites.jsx'
 
 import "./styles/global.css"
 
@@ -53,9 +53,10 @@ const rep = JSON.stringify(
 export default function App() {
   return (
     <main>
-      <Artist artist={tay}/>
+      {/* <Artist artist={tay}/>
       <Album album={rep} artist={tay}/>
-      <Home />
+      <Home /> */}
+      <Favorites />
     </main>
   )
 }

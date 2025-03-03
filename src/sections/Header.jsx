@@ -3,7 +3,7 @@ export default function Header() {
       <header className="flex-row wrap space-between align-center header">
         <img src="./logo.png"></img>
 
-        <div id="menu" className="flex-row">
+        <div id="menu" className="flex-row" alt="Logo Vibubble">
           <p className="turquoise">Home</p>
           <p>Favorites</p>
         </div>
