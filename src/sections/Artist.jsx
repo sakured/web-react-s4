@@ -1,97 +1,125 @@
-import AlbumCard from './../components/AlbumCard.jsx'
+import AlbumCard from './../components/AlbumCard.jsx';
 import { useEffect, useState, useMemo } from "react";
+import { useParams, Link } from "react-router-dom";
 
-export default function Artist({artist}) {
-    artist = JSON.parse(artist)
-    const [albums, setAlbums] = useState([]);
-    const [filter, setFilter] = useState('releasedate');
+export default function Artist() {
+  const { id } = useParams();
+  const [artist, setArtist] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [albums, setAlbums] = useState([]);
+  const [filter, setFilter] = useState('releasedate');
 
-   /* GET THE ALBUMS OF THE ARTIST */
-    useEffect(() => {
-      fetch("/database/albums.json") 
-        .then((response) => response.json())
-        .then((data) => {
-          const filtered = data.filter((album) => album.artist === artist.name);
-          setAlbums(filtered.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
-        })
-        .catch((error) => console.error("Erreur de chargement :", error));
-    }, []);
+  /* LOAD ARTIST INFORMATION */
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("/database/artists.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const foundArtist = data.find((artist) => String(artist.id) === String(id));
+        setArtist(foundArtist);
+      })
+      .catch((error) => console.error("LOADING ERROR:", error))
+      .finally(() => setIsLoading(false));
+  }, [id]);
 
-    /* ALBUMS AFTER FILTER */
-    const albumsAfterFilter = useMemo(() => {
-      if (filter === 'date') {
-        setAlbums(albums.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
-      } else if (filter === 'az') {
-        setAlbums(albums.sort((a, b) => a.title.localeCompare(b.title)));
-      } else if (filter === 'mostlistened') {
-        setAlbums(albums.sort((a, b) => b.fans - a.fans));
-      }
-    }, [albums, filter]);
+  /* LOAD ALBUMS WHEN ARTIST IS DEFINED */
+  useEffect(() => {
+    if (!artist) return; 
+    fetch("/database/albums.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const filtered_data = data.filter((album) => album.artist === artist.name);
+        setAlbums(filtered_data.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
+      })
+      .catch((error) => console.error("LOADING ERROR:", error));
+  }, [artist]); 
 
-    /* DISPLAY ELEMENTS OF THE ARTIST */
-    return (
-      <div className="content">
-        <div id="presentation" className="flex-row">
-          <img src={artist.picture_big} style={pictureStyle} alt={artist.name}/>
+  /* SORT ALBUMS */
+  const albumsAfterFilter = useMemo(() => {
+    if (filter === 'date') {
+      return [...albums].sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
+    } else if (filter === 'az') {
+      return [...albums].sort((a, b) => a.title.localeCompare(b.title));
+    } else if (filter === 'mostlistened') {
+      return [...albums].sort((a, b) => b.fans - a.fans);
+    }
+    return albums;
+  }, [albums, filter]);
 
-          <div id="presentation-text" className="flex-column justify-center">
-            <h1 style={artistStyle}>{artist.name}</h1>
-            <div className="flex-row">
-              {artist.genre.map((genre, index) => (
-                <span key={index} style={genreStyle}>{genre}</span>
-              ))}
-            </div>
-            <p>{artist.nb_fan} fans</p>
-            <img src="./heart-outlined.png" className='favorite-logo'></img>
+  /* HANDLE LOADING STATE */
+  if (isLoading) {
+    return <p className="content center">Loading...</p>;
+  }
+
+  /* HANDLE ARTIST NOT FOUND */
+  if (!artist) {
+    return <p className="content center">Artist not found.</p>;
+  }
+
+  /* DISPLAY ARTIST INFORMATION */
+  return (
+    <div className="content">
+      <div id="presentation" className="flex-row">
+        <img src={artist.picture_big} style={pictureStyle} alt={artist.name} />
+
+        <div id="presentation-text" className="flex-column justify-center">
+          <h1 style={artistStyle}>{artist.name}</h1>
+          <div className="flex-row">
+            {artist.genre.map((genre, index) => (
+              <span key={index} style={genreStyle}>{genre}</span>
+            ))}
           </div>
+          <p>{artist.nb_fan} fans</p>
+          <img src="../heart-outlined.png" className='favorite-logo' alt="favorite" />
         </div>
-
-        <div style={albumsStyle} className='flex-row space-between align-center'>
-          <h2>Albums</h2>
-          <div className="line" style={{marginLeft: '1rem'}}></div>
-          <select onChange={(e) => setFilter(e.target.value)} style={selectStyle}>
-            <option value="date">Release date</option>
-            <option value="az">A - Z</option>
-            <option value="mostlistened">Most listened</option>
-          </select>
-        </div>
-
-        <div id="albums" className='flex-row wrap space-between'>
-          {albums.map(album => (
-            <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
-          ))}
-        </div>
-
       </div>
-    )
-  }
 
-  /* STYLING */
+      <div style={albumsStyle} className='flex-row space-between align-center'>
+        <h2>Albums</h2>
+        <div className="line" style={{ marginLeft: '1rem' }}></div>
+        <select onChange={(e) => setFilter(e.target.value)} style={selectStyle}>
+          <option value="date">Release date</option>
+          <option value="az">A - Z</option>
+          <option value="mostlistened">Most listened</option>
+        </select>
+      </div>
 
-  const artistStyle = {
-    fontSize: '3rem',
-    margin: '0 0 1rem 0'
-  }
+      <div id="albums" className='flex-row wrap space-between'>
+        {albumsAfterFilter.map(album => (
+          <Link to={`/album/${album.id}`} key={album.id}>
+            <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
 
-  const pictureStyle = {
-    height: '18rem',
-    width: '18rem',
-    marginRight: '3rem',
-    marginTop: '1rem',
-    borderRadius: '100%',
-    cursor: 'default'
-  }
+/* STYLES */
+const artistStyle = {
+  fontSize: '3rem',
+  margin: '0 0 1rem 0'
+};
 
-  const genreStyle = {
-    marginRight: '0.5rem',
-    textTransform: 'capitalize'
-  }
+const pictureStyle = {
+  height: '18rem',
+  width: '18rem',
+  marginRight: '3rem',
+  marginTop: '1rem',
+  borderRadius: '100%',
+  cursor: 'default'
+};
 
-  const selectStyle = {
-    width: '13rem',
-  }
+const genreStyle = {
+  marginRight: '0.5rem',
+  textTransform: 'capitalize'
+};
 
-  const albumsStyle = {
-    marginTop: '3rem',
-    marginBottom: '3rem'
-  }
+const selectStyle = {
+  width: '13rem',
+};
+
+const albumsStyle = {
+  marginTop: '3rem',
+  marginBottom: '3rem'
+};

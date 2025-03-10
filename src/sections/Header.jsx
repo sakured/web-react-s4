@@ -1,11 +1,20 @@
+import { Link } from 'react-router-dom';
+
 export default function Header() {
     return (
       <header className="flex-row wrap space-between align-center header">
-        <img src="./logo.png"></img>
+        <Link to="/">
+          <img src="../logo.png" alt="Logo Vibubble"></img>
+        </Link>
 
         <div id="menu" className="flex-row" alt="Logo Vibubble">
-          <p className="turquoise">Home</p>
-          <p>Favorites</p>
+          <Link to="/">
+            <p className="turquoise">Home</p>
+          </Link>
+
+          <Link to="/favorites">
+            <p>Favorites</p>
+          </Link>
         </div>
       </header>
     )

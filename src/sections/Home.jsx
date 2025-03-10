@@ -5,10 +5,11 @@ import SongCardTitle from './../components/SongCardTitle.jsx'
 import TopAlbums from './../components/TopAlbums.jsx'
 import TopSongs from './../components/TopSongs.jsx'
 import FilterBanner from './../components/FilterBanner.jsx'
-import ArtistData from './../../database/artist.json'
+import ArtistData from './../../database/artists.json'
 import AlbumData from './../../database/albums.json'
 import SongData from './../../database/tracks.json'
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const [search, setSearch] = useState('');
@@ -55,7 +56,7 @@ export default function Home() {
   
 
   return (
-    <div className="content">
+    <div className="content" id="home">
       <FilterBanner setSearch={setSearch} setGenre={setGenre}/>
 
       <div className="wrap justify-center" id="artists">
@@ -63,7 +64,9 @@ export default function Home() {
           <p>No artist found</p>
         ) : (
           filteredArtists.map(artist => (
-            <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
+            <Link to={`/artist/${artist.id}`} key={artist.id}>
+              <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
+            </Link>
           ))
         )}
       </div>
@@ -75,7 +78,9 @@ export default function Home() {
         ) : ( (search.length === 0 && genre === 'all') ? (
             <TopAlbums/>
           ) : ( filteredAlbums.map(album => (
-            <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
+            <Link to={`/album/${album.id}`} key={album.id}>
+              <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
+            </Link>
           )))
         )}
       </div>
