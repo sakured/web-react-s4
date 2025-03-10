@@ -67,12 +67,12 @@ export default function Album() {
 
         <div id="presentation-text" className="flex-column justify-center">
           <h1 style={albumStyle}>{album.title}</h1>
-          <a href=""><div className='flex-row align-center'> 
+          <div className='flex-row align-center'> 
             <img src={artist?.picture_small} style={artistPictureStyle} alt={artist?.name}/>
             <Link to={`/artist/${artist?.id}`} key={artist?.id}>
               <p>{album.artist}</p>
             </Link>
-          </div></a>
+          </div>
           <div className="flex-row">
             {album.genre.map((genre, index) => (
               <span key={index} style={genreStyle}>{genre}</span>

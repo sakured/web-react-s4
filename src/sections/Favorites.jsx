@@ -4,6 +4,7 @@ import SongCard from './../components/SongCard.jsx'
 import SongCardTitle from './../components/SongCardTitle.jsx'
 import FavoritesFilterBanner from './../components/FavoritesFilterBanner.jsx'
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Favorites() {
   const [search, setSearch] = useState('');
@@ -105,7 +106,9 @@ export default function Favorites() {
               <p style={{marginTop:'0', marginBottom:'2rem'}}>No artist</p>
             ) : (
               filteredArtists.map(artist => (
-                <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
+                <Link to={`/artist/${artist.id}`} key={artist.id}>
+                  <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
+                </Link>
               ))
             )}
         </div>
@@ -121,7 +124,9 @@ export default function Favorites() {
               <p style={{marginTop:'0', marginBottom:'2rem'}}>No album</p>
             ) : (
               filteredAlbums.map(album => (
-                <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
+                <Link to={`/album/${album.id}`} key={album.id}>
+                  <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
+                </Link>
               ))
             )}
         </div>
