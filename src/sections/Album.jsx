@@ -7,6 +7,33 @@ export default function Album() {
   const [album, setAlbum] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [songs, setsongs] = useState([]);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  /* CHECK IF THE ALBUMS IS A FAVORITE */
+  useEffect(() => {
+    const favoriteAlbums = JSON.parse(localStorage.getItem("albums")) || [];
+    setIsFavorite(favoriteAlbums.some((fav) => String(fav.id) == String(id)));
+  }, [id]);
+
+  /* UPDATE THE LIST OF FAVORITE ALBUMS */
+  const handleFavoriteClick = () => {
+    let favoriteAlbums = JSON.parse(localStorage.getItem("albums")) || [];
+    let options_of_artists = JSON.parse(localStorage.getItem("options_of_artists")) || [];
+
+    if (isFavorite) {
+      favoriteAlbums = favoriteAlbums.filter((fav) => String(fav.id) !== String(id));
+      options_of_artists = options_of_artists.filter((art) => art !== artist.name);
+      setIsFavorite(false);
+    } else {
+      if (album) {
+        favoriteAlbums.push(album);
+        options_of_artists.push(artist.name);
+        setIsFavorite(true);
+      }
+    }
+    localStorage.setItem("albums", JSON.stringify(favoriteAlbums));
+    localStorage.setItem("options_of_artists", JSON.stringify(options_of_artists));
+  };
 
   /* LOAD ALBUM INFORMATION */
   useEffect(() => {
@@ -80,7 +107,7 @@ export default function Album() {
           </div>
           <p>{album.release_date}</p>
           <p style={{marginTop:'0rem'}}>{album.fans} fans</p>
-          <img src="../heart-outlined.png" className='favorite-logo'></img>
+          <img src={isFavorite === true ? "../heart-filled.png" : "../heart-outlined.png"} className='favorite-logo' onClick={() => handleFavoriteClick()}></img>
         </div>
       </div>
 
