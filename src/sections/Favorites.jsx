@@ -68,7 +68,7 @@ export default function Favorites() {
         return song.artist.name.includes(selected_artist) || selected_artist === 'all';
       })
     }
-    return SongsAfterFilter.sort((a, b) => a.title.localeCompare(b.title));
+    return SongsAfterFilter.sort((a, b) => a.album.localeCompare(b.album));
   }, [search, genre, selected_artist]);
 
 

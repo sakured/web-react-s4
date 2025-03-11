@@ -28,7 +28,9 @@ export default function Artist() {
     } else {
       if (artist) {
         favoriteArtists.push(artist);
-        options_of_artists.push(artist.name);
+        if (!options_of_artists.includes(artist.name)) {
+          options_of_artists.push(artist.name);
+        }
         setIsFavorite(true);
       }
     }

@@ -8,12 +8,19 @@ export default function Album() {
   const [isLoading, setIsLoading] = useState(true);
   const [songs, setsongs] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [favoriteSongs, setFavoriteSongs] = useState([]);
 
   /* CHECK IF THE ALBUMS IS A FAVORITE */
   useEffect(() => {
     const favoriteAlbums = JSON.parse(localStorage.getItem("albums")) || [];
     setIsFavorite(favoriteAlbums.some((fav) => String(fav.id) == String(id)));
   }, [id]);
+
+  /* CHECK IF THE SONGS ARE FAVORITES */
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("songs")) || [];
+    setFavoriteSongs(storedFavorites);
+  }, []);  
 
   /* UPDATE THE LIST OF FAVORITE ALBUMS */
   const handleFavoriteClick = () => {
@@ -27,11 +34,32 @@ export default function Album() {
     } else {
       if (album) {
         favoriteAlbums.push(album);
-        options_of_artists.push(artist.name);
+        if (!options_of_artists.includes(artist.name)) {
+          options_of_artists.push(artist.name);
+        }
         setIsFavorite(true);
       }
     }
     localStorage.setItem("albums", JSON.stringify(favoriteAlbums));
+    localStorage.setItem("options_of_artists", JSON.stringify(options_of_artists));
+  };
+
+  /* UPDATE THE LIST OF FAVORITE SONGS */
+  const handleFavoriteSongsClick = (song) => {
+    let updatedFavoriteSongs = [...favoriteSongs];
+    let options_of_artists = JSON.parse(localStorage.getItem("options_of_artists")) || [];
+  
+    if (favoriteSongs.some(fav => fav.id === song.id)) {
+      updatedFavoriteSongs = updatedFavoriteSongs.filter(fav => fav.id !== song.id);
+      options_of_artists = options_of_artists.filter((art) => art !== artist.name);
+    } else {
+      updatedFavoriteSongs.push(song);
+      if (!options_of_artists.includes(artist.name)) {
+        options_of_artists.push(artist.name);
+      }
+    }
+    setFavoriteSongs(updatedFavoriteSongs);
+    localStorage.setItem("songs", JSON.stringify(updatedFavoriteSongs));
     localStorage.setItem("options_of_artists", JSON.stringify(options_of_artists));
   };
 
@@ -126,7 +154,7 @@ export default function Album() {
             <p style={songTitleStyle}>{song.track_position}. {song.title}</p>
             <div className='flex-row space-between align-center' style={tableStyle}>
               <p>{Math.floor(song.duration/60)}:{(song.duration % 60).toString().padStart(2, '0')}</p>
-              <img src="../heart-outlined.png" style={favoriteStyle}></img>
+              <img src={favoriteSongs.some(fav => fav.id === song.id) ? "../heart-filled.png" : "../heart-outlined.png"} className='favorite-logo' onClick={() => handleFavoriteSongsClick(song)}style={favoriteStyle}></img>
             </div>
           </div>
         ))}
