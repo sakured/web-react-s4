@@ -14,6 +14,8 @@ import { Link } from 'react-router-dom';
 export default function Home() {
   const [search, setSearch] = useState('');
   const [genre, setGenre] = useState('all');
+  const [favorites, setFavorites] = useState(false);
+  const [type, setType] = useState('artists');
 
   /* FILTERED ARTISTS */
   const filteredArtists = useMemo(() => {
@@ -54,54 +56,71 @@ export default function Home() {
     return SongsAfterFilter.sort((a, b) => a.artist.name.localeCompare(b.artist.name));
   }, [search, genre]);
   
+  /* DISPLAY ARTISTS */
+  if (type === 'artists') {
+    return (
+      <div className="content" id="home">
+        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType}/>
 
-  return (
-    <div className="content" id="home">
-      <FilterBanner setSearch={setSearch} setGenre={setGenre}/>
-
-      <div className="wrap justify-center" id="artists">
-        {filteredArtists.length === 0 ? (
-          <p>No artist found</p>
-        ) : (
-          filteredArtists.map(artist => (
-            <Link to={`/artist/${artist.id}`} key={artist.id}>
-              <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
-            </Link>
-          ))
-        )}
+        <div className="wrap justify-center" id="artists">
+          {filteredArtists.length === 0 ? (
+            <p style={{margin: '0.1rem'}}>No artist found</p>
+          ) : (
+            filteredArtists.map(artist => (
+              <Link to={`/artist/${artist.id}`} key={artist.id}>
+                <ArtistCard key={artist.id} artistImg={artist.picture_big} artistName={artist.name} />
+              </Link>
+            ))
+          )}
+        </div>
       </div>
+    )
 
+  /* DISPLAY ALBUMS */
+  } else if (type === 'albums') {
+    return (
+      <div className="content" id="home">
+        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType}/>
 
-      <div className="wrap justify-center" id="albums">
-        {filteredAlbums.length === 0 ? (
-          <p>No album found</p>
-        ) : ( (search.length === 0 && genre === 'all') ? (
-            <TopAlbums/>
-          ) : ( filteredAlbums.map(album => (
-            <Link to={`/album/${album.id}`} key={album.id}>
-              <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
-            </Link>
-          )))
-        )}
+        <div className="wrap justify-center" id="albums">
+          {filteredAlbums.length === 0 ? (
+            <p>No album found</p>
+          ) : ( (search.length === 0 && genre === 'all') ? (
+              <TopAlbums/>
+            ) : ( filteredAlbums.map(album => (
+              <Link to={`/album/${album.id}`} key={album.id}>
+                <AlbumCard key={album.id} albumImg={album.cover_medium} albumName={album.title} artistName={album.artist} />
+              </Link>
+            )))
+          )}
+        </div>
       </div>
+    )
 
-      {filteredSongs.length === 0 ? (
-          <SongCardTitle />
-        ) : ( (search.length != 0 || genre != 'all') ? (
-            <SongCardTitle />
-          ) : <p></p>
-        )}
+  /* DISPLAY SONGS */
+  } else if (type === 'songs') {
+    return (
+      <div className="content" id="home">
+        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType}/>
 
-      <div className="flex-column" id="songs">
         {filteredSongs.length === 0 ? (
-          <p className='center'>No song found</p>
-        ) : ( (search.length === 0 && genre === 'all') ? (
-              <TopSongs/>
-          ) : ( filteredSongs.map(song => (
-            <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} songDuration={song.duration} />
-          )))
-        )}
+            <SongCardTitle />
+          ) : ( (search.length != 0 || genre != 'all') ? (
+              <SongCardTitle />
+            ) : <p></p>
+          )}
+
+        <div className="flex-column" id="songs">
+          {filteredSongs.length === 0 ? (
+            <p className='center'>No song found</p>
+          ) : ( (search.length === 0 && genre === 'all') ? (
+                <TopSongs/>
+            ) : ( filteredSongs.map(song => (
+              <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} songDuration={song.duration} />
+            )))
+          )}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }

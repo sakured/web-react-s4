@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Header() {
+export default function Header() {  
     return (
       <header className="flex-row wrap space-between align-center header">
         <Link to="/">
@@ -9,11 +9,11 @@ export default function Header() {
 
         <div id="menu" className="flex-row" alt="Logo Vibubble">
           <Link to="/">
-            <p className="turquoise">Home</p>
+            <p className={useLocation().pathname === "/" ? "turquoise" : ""}>Home</p>
           </Link>
 
           <Link to="/favorites">
-            <p>Favorites</p>
+            <p className={useLocation().pathname === "/favorites" ? "turquoise" : ""}>Favorites</p>
           </Link>
         </div>
       </header>

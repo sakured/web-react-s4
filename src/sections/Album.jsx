@@ -113,7 +113,8 @@ export default function Album() {
 
 const albumStyle = {
   fontSize: '3rem',
-  margin: '0 0 1rem 0'
+  margin: '0 0 1rem 0',
+  textAlign: 'left',
 }
 
 const artistPictureStyle = {

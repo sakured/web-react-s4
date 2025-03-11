@@ -150,15 +150,19 @@ h1 {
 }
 
 .footer a:hover,
-#home a:hover,
 #presentation-text a:hover {
     text-decoration: underline;
 }
 
 /************************************* HOME *************************************/
 
-#home a {
+#home a,
+#albums a {
     text-decoration: none;
+}
+
+#home h1 {
+    margin-top: 0;
 }
 
 /************************************* FILTERS BANNER *************************************/
