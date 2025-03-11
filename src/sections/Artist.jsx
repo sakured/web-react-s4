@@ -4,10 +4,38 @@ import { useParams, Link } from "react-router-dom";
 
 export default function Artist() {
   const { id } = useParams();
-  const [artist, setArtist] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [artist, setArtist] = useState(null);
   const [albums, setAlbums] = useState([]);
   const [filter, setFilter] = useState('releasedate');
+  const [isFavorite, setIsFavorite] = useState(false);
+  
+  /* CHECK IF THE ARTIST IS A FAVORITE */
+  useEffect(() => {
+    const favoriteArtists = JSON.parse(localStorage.getItem("artists")) || [];
+    setIsFavorite(favoriteArtists.some((fav) => String(fav.id) == String(id)));
+  }, [id]);
+
+  /* UPDATE THE LIST OF FAVORITE ARTISTS */
+  const handleFavoriteClick = () => {
+    let favoriteArtists = JSON.parse(localStorage.getItem("artists")) || [];
+    let options_of_artists = JSON.parse(localStorage.getItem("options_of_artists")) || [];
+
+    if (isFavorite) {
+      favoriteArtists = favoriteArtists.filter((fav) => String(fav.id) !== String(id));
+      options_of_artists = options_of_artists.filter((art) => art !== artist.name);
+      setIsFavorite(false);
+    } else {
+      if (artist) {
+        favoriteArtists.push(artist);
+        options_of_artists.push(artist.name);
+        setIsFavorite(true);
+      }
+    }
+    localStorage.setItem("artists", JSON.stringify(favoriteArtists));
+    localStorage.setItem("options_of_artists", JSON.stringify(options_of_artists));
+  };
+
 
   /* LOAD ARTIST INFORMATION */
   useEffect(() => {
@@ -70,7 +98,7 @@ export default function Artist() {
             ))}
           </div>
           <p>{artist.nb_fan} fans</p>
-          <img src="../heart-outlined.png" className='favorite-logo' alt="favorite" />
+          <img src={isFavorite === true ? "../heart-filled.png" : "../heart-outlined.png"} className='favorite-logo' alt="favorite" onClick={() => handleFavoriteClick()} />
         </div>
       </div>
 
@@ -95,7 +123,7 @@ export default function Artist() {
   );
 }
 
-/* STYLES */
+/* STYLING */
 const artistStyle = {
   fontSize: '3rem',
   margin: '0 0 1rem 0'

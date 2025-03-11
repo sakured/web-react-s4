@@ -157,7 +157,8 @@ h1 {
 /************************************* HOME *************************************/
 
 #home a,
-#albums a {
+#albums a,
+#artists a {
     text-decoration: none;
 }
 
