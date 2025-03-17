@@ -108,7 +108,15 @@ h1 {
 }
 
 .center {
-    text-align: center;
+    text-align: center !important;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.left {
+    text-align: left !important;
 }
 
 /************************************* HEADER *************************************/
@@ -290,8 +298,10 @@ img:hover {
     p.nonable {
         display: none;
     }
-    #songs > div > p {
+    #songs .song-title {
         width: 100% !important;
+        max-width: 13rem !important;
+        text-align: left !important;
     }
 }
 

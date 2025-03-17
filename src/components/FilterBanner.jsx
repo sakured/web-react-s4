@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FilterBanner({setSearch, setGenre, setType}) {
+export default function FilterBanner({setSearch, setGenre, setType, isFavorites, setFavorites}) {
   
   const [selectedType, setSelectedType] = useState("artists");
 
@@ -29,7 +29,7 @@ export default function FilterBanner({setSearch, setGenre, setType}) {
           <option value="french variety">French variety</option>
         </select>
 
-        <img src="./heart-outlined.png" style={FavoriteButtonStyle}></img>
+        <img src={isFavorites === true ? "../heart-filled.png" : "../heart-outlined.png"} style={FavoriteButtonStyle} onClick={() => setFavorites(prev => !prev)}></img>
       </div>
 
       <div id="element-type-filter" className="flex-row space-between">

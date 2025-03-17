@@ -15,7 +15,7 @@ export default function Favorites() {
   let artists = JSON.parse(localStorage.getItem('artists')) || []
   let albums = JSON.parse(localStorage.getItem('albums')) || []
   let songs = JSON.parse(localStorage.getItem('songs')) || []
-  let options_of_artists = JSON.parse(localStorage.getItem('options_of_artists')) || []
+  let optionsOfArtists = JSON.parse(localStorage.getItem('optionsOfArtists')) || []
 
   /* FILTER THE ARTISTS */
   const filteredArtists = useMemo(() => {
@@ -76,7 +76,7 @@ export default function Favorites() {
   return (
     <div className="content" style={{marginBottom: '3rem'}}>
       <h1 className="center">MY FAVORITES</h1>  
-      <FavoritesFilterBanner setSearch={setSearch} setGenre={setGenre} setArtist={setArtist} artists={options_of_artists}/>
+      <FavoritesFilterBanner setSearch={setSearch} setGenre={setGenre} setArtist={setArtist} artists={optionsOfArtists}/>
 
       <div className='flex-row space-between align-center'>
         <h2>Artists</h2>

@@ -25,42 +25,42 @@ export default function Album() {
   /* UPDATE THE LIST OF FAVORITE ALBUMS */
   const handleFavoriteClick = () => {
     let favoriteAlbums = JSON.parse(localStorage.getItem("albums")) || [];
-    let options_of_artists = JSON.parse(localStorage.getItem("options_of_artists")) || [];
+    let optionsOfArtists = JSON.parse(localStorage.getItem("optionsOfArtists")) || [];
 
     if (isFavorite) {
       favoriteAlbums = favoriteAlbums.filter((fav) => String(fav.id) !== String(id));
-      options_of_artists = options_of_artists.filter((art) => art !== artist.name);
+      optionsOfArtists = optionsOfArtists.filter((art) => art !== artist.name);
       setIsFavorite(false);
     } else {
       if (album) {
         favoriteAlbums.push(album);
-        if (!options_of_artists.includes(artist.name)) {
-          options_of_artists.push(artist.name);
+        if (!optionsOfArtists.includes(artist.name)) {
+          optionsOfArtists.push(artist.name);
         }
         setIsFavorite(true);
       }
     }
     localStorage.setItem("albums", JSON.stringify(favoriteAlbums));
-    localStorage.setItem("options_of_artists", JSON.stringify(options_of_artists));
+    localStorage.setItem("optionsOfArtists", JSON.stringify(optionsOfArtists));
   };
 
   /* UPDATE THE LIST OF FAVORITE SONGS */
   const handleFavoriteSongsClick = (song) => {
     let updatedFavoriteSongs = [...favoriteSongs];
-    let options_of_artists = JSON.parse(localStorage.getItem("options_of_artists")) || [];
+    let optionsOfArtists = JSON.parse(localStorage.getItem("optionsOfArtists")) || [];
   
     if (favoriteSongs.some(fav => fav.id === song.id)) {
       updatedFavoriteSongs = updatedFavoriteSongs.filter(fav => fav.id !== song.id);
-      options_of_artists = options_of_artists.filter((art) => art !== artist.name);
+      optionsOfArtists = optionsOfArtists.filter((art) => art !== artist.name);
     } else {
       updatedFavoriteSongs.push(song);
-      if (!options_of_artists.includes(artist.name)) {
-        options_of_artists.push(artist.name);
+      if (!optionsOfArtists.includes(artist.name)) {
+        optionsOfArtists.push(artist.name);
       }
     }
     setFavoriteSongs(updatedFavoriteSongs);
     localStorage.setItem("songs", JSON.stringify(updatedFavoriteSongs));
-    localStorage.setItem("options_of_artists", JSON.stringify(options_of_artists));
+    localStorage.setItem("optionsOfArtists", JSON.stringify(optionsOfArtists));
   };
 
   /* LOAD ALBUM INFORMATION */
@@ -90,7 +90,6 @@ export default function Album() {
       .catch((error) => console.error("LOADING ERROR:", error))
       .finally(() => setIsLoading(false));
   }, [album]); 
-  
 
   /* GET THE SONGS OF THE ALBUM WHEN ALBUM IS DEFINED */
   useEffect(() => {
@@ -98,8 +97,8 @@ export default function Album() {
     fetch("/database/tracks.json") 
       .then((response) => response.json())
       .then((data) => {
-        const filtered_data = data.filter((song) => String(song.album) === String(album.title));
-        setsongs(filtered_data.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
+        const filteredData = data.filter((song) => String(song.album) === String(album.title));
+        setsongs(filteredData.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
       })
       .catch((error) => console.error("Erreur de chargement :", error));
   }, [album]);

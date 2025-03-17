@@ -1,15 +1,15 @@
-export default function SongCard() {
+export default function SongCardTitle() {
     return (
         <div>
             <div id="songs" className="flex-row" >
                 <img src="./clock.png" style={tableLogoStyle}></img>
                 <div className="flex-row space-between" style={divInfosStyle}>
-                    <p style={{width: '30%', textAlign: 'left'}}>TITLE</p>
-                    <p className='nonable' style={{width: '30%', textAlign: 'center'}}>ALBUM</p>
-                    <p className='nonable' style={{width: '30%', textAlign: 'right'}}>DURATION</p>
+                    <p className='left' style={attributeTitleStyle}>TITLE</p>
+                    <p className='center nonable' style={attributeTitleStyle}>ALBUM</p>
+                    <p className='right nonable' style={attributeTitleStyle}>DURATION</p>
                 </div>
             </div>
-            <div className="line" style={{marginTop:'0.8rem', marginBottom:'1rem'}}></div>
+            <div className="line" style={lineStyle}></div>
         </div>
     )
 }
@@ -28,4 +28,13 @@ const tableLogoStyle = {
   width: '1.8rem',
   marginRight: '2rem',
   cursor: 'default'
+}
+
+const attributeTitleStyle = {
+    width: '30%'
+}
+
+const lineStyle = {
+    marginTop:'0.8rem', 
+    marginBottom:'1rem'
 }

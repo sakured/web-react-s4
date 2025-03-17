@@ -8,7 +8,7 @@ import FilterBanner from './../components/FilterBanner.jsx'
 import ArtistData from './../../database/artists.json'
 import AlbumData from './../../database/albums.json'
 import SongData from './../../database/tracks.json'
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -16,6 +16,17 @@ export default function Home() {
   const [genre, setGenre] = useState('all');
   const [favorites, setFavorites] = useState(false);
   const [type, setType] = useState('artists');
+
+  /* GET THE FAVORITES IN THE LOCAL STORAGE */
+  const [favoriteArtists, setFavoriteArtists] = useState([]);
+  const [favoriteAlbums, setFavoriteAlbums] = useState([]);
+  const [favoriteSongs, setFavoriteSongs] = useState([]);
+
+  useEffect(() => {
+    setFavoriteArtists(JSON.parse(localStorage.getItem('artists')) || []);
+    setFavoriteAlbums(JSON.parse(localStorage.getItem('albums')) || []);
+    setFavoriteSongs(JSON.parse(localStorage.getItem('songs')) || []);
+  }, []);
 
   /* FILTERED ARTISTS */
   const filteredArtists = useMemo(() => {
@@ -27,8 +38,12 @@ export default function Home() {
         return artist.genre.includes(genre) || genre === 'all';
       })
     }
+    if(favorites) {
+      const artistIds = new Set(favoriteArtists.map(artist => artist.id));
+      ArtistsAfterFilter = ArtistsAfterFilter.filter(artist => artistIds.has(artist.id));
+    }
     return ArtistsAfterFilter.sort((a, b) => a.name.localeCompare(b.name));
-  }, [search, genre]);
+  }, [search, genre, favorites]);
 
   /* FILTERED ALBUMS */
   const filteredAlbums = useMemo(() => {
@@ -40,8 +55,12 @@ export default function Home() {
         return album.genre.includes(genre) || genre === 'all';
       })
     }
+    if(favorites) {
+      const albumIds = new Set(favoriteAlbums.map(album => album.id));
+      AlbumsAfterFilter = AlbumsAfterFilter.filter(album => albumIds.has(album.id));
+    }
     return AlbumsAfterFilter.sort((a, b) => a.artist.localeCompare(b.artist));
-  }, [search, genre]);
+  }, [search, genre, favorites]);
 
   /* FILTERED SONGS */
   const filteredSongs = useMemo(() => {
@@ -53,14 +72,18 @@ export default function Home() {
         return song.genre.includes(genre) || genre === 'all';
       })
     }
+    if(favorites) {
+      const songIds = new Set(favoriteSongs.map(song => song.id));
+      SongsAfterFilter = SongsAfterFilter.filter(song => songIds.has(song.id));
+    }
     return SongsAfterFilter.sort((a, b) => a.artist.name.localeCompare(b.artist.name));
-  }, [search, genre]);
+  }, [search, genre, favorites]);
   
   /* DISPLAY ARTISTS */
   if (type === 'artists') {
     return (
       <div className="content" id="home">
-        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType}/>
+        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType} isFavorites={favorites} setFavorites={setFavorites}/>
 
         <div className="wrap justify-center" id="artists">
           {filteredArtists.length === 0 ? (
@@ -80,12 +103,12 @@ export default function Home() {
   } else if (type === 'albums') {
     return (
       <div className="content" id="home">
-        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType}/>
+          <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType} isFavorites={favorites} setFavorites={setFavorites}/>
 
         <div className="wrap justify-center" id="albums">
           {filteredAlbums.length === 0 ? (
             <p>No album found</p>
-          ) : ( (search.length === 0 && genre === 'all') ? (
+          ) : ( (search.length === 0 && genre === 'all' && !favorites) ? (
               <TopAlbums/>
             ) : ( filteredAlbums.map(album => (
               <Link to={`/album/${album.id}`} key={album.id}>
@@ -101,7 +124,7 @@ export default function Home() {
   } else if (type === 'songs') {
     return (
       <div className="content" id="home">
-        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType}/>
+        <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType}  isFavorites={favorites} setFavorites={setFavorites}/>
 
         {filteredSongs.length === 0 ? (
             <SongCardTitle />
@@ -113,7 +136,7 @@ export default function Home() {
         <div className="flex-column" id="songs">
           {filteredSongs.length === 0 ? (
             <p className='center'>No song found</p>
-          ) : ( (search.length === 0 && genre === 'all') ? (
+          ) : ( (search.length === 0 && genre === 'all' && !favorites) ? (
                 <TopSongs/>
             ) : ( filteredSongs.map(song => (
               <SongCard key={song.id} songTitle={song.title} songAlbum={song.album} songArtist={song.artist.name} songDuration={song.duration} />

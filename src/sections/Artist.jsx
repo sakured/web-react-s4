@@ -19,25 +19,24 @@ export default function Artist() {
   /* UPDATE THE LIST OF FAVORITE ARTISTS */
   const handleFavoriteClick = () => {
     let favoriteArtists = JSON.parse(localStorage.getItem("artists")) || [];
-    let options_of_artists = JSON.parse(localStorage.getItem("options_of_artists")) || [];
+    let optionsOfArtists = JSON.parse(localStorage.getItem("optionsOfArtists")) || [];
 
     if (isFavorite) {
       favoriteArtists = favoriteArtists.filter((fav) => String(fav.id) !== String(id));
-      options_of_artists = options_of_artists.filter((art) => art !== artist.name);
+      optionsOfArtists = optionsOfArtists.filter((art) => art !== artist.name);
       setIsFavorite(false);
     } else {
       if (artist) {
         favoriteArtists.push(artist);
-        if (!options_of_artists.includes(artist.name)) {
-          options_of_artists.push(artist.name);
+        if (!optionsOfArtists.includes(artist.name)) {
+          optionsOfArtists.push(artist.name);
         }
         setIsFavorite(true);
       }
     }
     localStorage.setItem("artists", JSON.stringify(favoriteArtists));
-    localStorage.setItem("options_of_artists", JSON.stringify(options_of_artists));
+    localStorage.setItem("optionsOfArtists", JSON.stringify(optionsOfArtists));
   };
-
 
   /* LOAD ARTIST INFORMATION */
   useEffect(() => {
@@ -58,8 +57,8 @@ export default function Artist() {
     fetch("/database/albums.json")
       .then((response) => response.json())
       .then((data) => {
-        const filtered_data = data.filter((album) => album.artist === artist.name);
-        setAlbums(filtered_data.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
+        const filteredData = data.filter((album) => album.artist === artist.name);
+        setAlbums(filteredData.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
       })
       .catch((error) => console.error("LOADING ERROR:", error));
   }, [artist]); 
@@ -106,7 +105,7 @@ export default function Artist() {
 
       <div style={albumsStyle} className='flex-row space-between align-center'>
         <h2>Albums</h2>
-        <div className="line" style={{ marginLeft: '1rem' }}></div>
+        <div className="line" style={lineStyle}></div>
         <select onChange={(e) => setFilter(e.target.value)} style={selectStyle}>
           <option value="date">Release date</option>
           <option value="az">A - Z</option>
@@ -143,6 +142,10 @@ const pictureStyle = {
 const genreStyle = {
   marginRight: '0.5rem',
   textTransform: 'capitalize'
+};
+
+const lineStyle = {
+  marginLeft: '1rem'
 };
 
 const selectStyle = {
