@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export default function FilterBanner({setSearch, setGenre, setType, isFavorites, setFavorites}) {
-  
   const [selectedType, setSelectedType] = useState("artists");
 
   /* CHANGE THE STATE OF THE TYPE */
