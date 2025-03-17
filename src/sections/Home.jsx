@@ -30,54 +30,35 @@ export default function Home() {
 
   /* FILTERED ARTISTS */
   const filteredArtists = useMemo(() => {
-    let ArtistsAfterFilter = ArtistData.filter(artist => {
-      return artist.name.toLowerCase().includes(search.toLowerCase());
-    })
-    if(genre) {
-      ArtistsAfterFilter = ArtistsAfterFilter.filter(artist => {
-        return artist.genre.includes(genre) || genre === 'all';
-      })
-    }
-    if(favorites) {
-      const artistIds = new Set(favoriteArtists.map(artist => artist.id));
-      ArtistsAfterFilter = ArtistsAfterFilter.filter(artist => artistIds.has(artist.id));
-    }
-    return ArtistsAfterFilter.sort((a, b) => a.name.localeCompare(b.name));
-  }, [search, genre, favorites]);
+    return ArtistData.filter(artist => {
+      const matchesSearch = artist.name.toLowerCase().includes(search.toLowerCase());
+      const matchesGenre = genre === 'all' || artist.genre.includes(genre);
+      const matchesFavorites = !favorites || favoriteArtists.some(fav => fav.id === artist.id);
+      return matchesSearch && matchesGenre && matchesFavorites;
+    }).sort((a, b) => a.name.localeCompare(b.name));
+  }, [search, genre, favorites, favoriteArtists]);
 
   /* FILTERED ALBUMS */
   const filteredAlbums = useMemo(() => {
-    let AlbumsAfterFilter = AlbumData.filter(album => {
-      return (album.title.toLowerCase().includes(search.toLowerCase()) || album.artist.toLowerCase().includes(search.toLowerCase()));
-    })
-    if(genre) {
-      AlbumsAfterFilter = AlbumsAfterFilter.filter(album => {
-        return album.genre.includes(genre) || genre === 'all';
-      })
-    }
-    if(favorites) {
-      const albumIds = new Set(favoriteAlbums.map(album => album.id));
-      AlbumsAfterFilter = AlbumsAfterFilter.filter(album => albumIds.has(album.id));
-    }
-    return AlbumsAfterFilter.sort((a, b) => a.artist.localeCompare(b.artist));
-  }, [search, genre, favorites]);
+    return AlbumData.filter(album => {
+      const matchesSearch = album.title.toLowerCase().includes(search.toLowerCase()) || album.artist.toLowerCase().includes(search.toLowerCase());
+      const matchesGenre = genre === 'all' || album.genre.includes(genre);
+      const matchesFavorites = !favorites || favoriteAlbums.some(fav => fav.id === album.id);
+      return matchesSearch && matchesGenre && matchesFavorites;
+    }).sort((a, b) => a.artist.localeCompare(b.artist));
+  }, [search, genre, favorites, favoriteAlbums]);
 
   /* FILTERED SONGS */
   const filteredSongs = useMemo(() => {
-    let SongsAfterFilter = SongData.filter(song => {
-      return (song.title.toLowerCase().includes(search.toLowerCase()) || song.album.toLowerCase().includes(search.toLowerCase()) || song.artist.name.toLowerCase().includes(search.toLowerCase()));
-    })
-    if(genre) {
-      SongsAfterFilter = SongsAfterFilter.filter(song => {
-        return song.genre.includes(genre) || genre === 'all';
-      })
-    }
-    if(favorites) {
-      const songIds = new Set(favoriteSongs.map(song => song.id));
-      SongsAfterFilter = SongsAfterFilter.filter(song => songIds.has(song.id));
-    }
-    return SongsAfterFilter.sort((a, b) => a.artist.name.localeCompare(b.artist.name));
-  }, [search, genre, favorites]);
+    return SongData.filter(song => {
+      const matchesSearch = song.title.toLowerCase().includes(search.toLowerCase()) ||
+                            song.album.toLowerCase().includes(search.toLowerCase()) ||
+                            song.artist.name.toLowerCase().includes(search.toLowerCase());
+      const matchesGenre = genre === 'all' || song.genre.includes(genre);
+      const matchesFavorites = !favorites || favoriteSongs.some(fav => fav.id === song.id);
+      return matchesSearch && matchesGenre && matchesFavorites;
+    }).sort((a, b) => a.artist.name.localeCompare(b.artist.name));
+  }, [search, genre, favorites, favoriteSongs]);
   
   /* DISPLAY ARTISTS */
   if (type === 'artists') {

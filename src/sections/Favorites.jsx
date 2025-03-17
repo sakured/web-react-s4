@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export default function Favorites() {
   const [search, setSearch] = useState('');
   const [genre, setGenre] = useState('all');
-  const [selected_artist, setArtist] = useState('all');
+  const [selectedArtist, setArtist] = useState('all');
 
   /* GET THE FAVORITES IN THE LOCAL STORAGE */
   let artists = JSON.parse(localStorage.getItem('artists')) || []
@@ -19,57 +19,39 @@ export default function Favorites() {
 
   /* FILTER THE ARTISTS */
   const filteredArtists = useMemo(() => {
-    let ArtistsAfterFilter = artists.filter(artist => {
-      return artist.name.toLowerCase().includes(search.toLowerCase());
-    })
-    if(genre) {
-      ArtistsAfterFilter = ArtistsAfterFilter.filter(artist => {
-        return artist.genre.includes(genre) || genre === 'all';
-      })
-    }
-    if(selected_artist) {
-      ArtistsAfterFilter = ArtistsAfterFilter.filter(artist => {
-        return artist.name.includes(selected_artist) || selected_artist === 'all';
-      })
-    }
-    return ArtistsAfterFilter.sort((a, b) => a.name.localeCompare(b.name));
-  }, [search, genre, selected_artist]);
+    return artists
+    .filter(artist => 
+        artist.name?.toLowerCase().includes(search.toLowerCase()) &&
+        (genre === 'all' || artist.genre.includes(genre)) &&
+        (selectedArtist === 'all' || artist.name.includes(selectedArtist))
+      )
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [search, genre, selectedArtist]);
   
   /* FILTER THE ALBUMS */
   const filteredAlbums = useMemo(() => {
-    let AlbumsAfterFilter = albums.filter(album => {
-      return album.title.toLowerCase().includes(search.toLowerCase()) || album.artist.toLowerCase().includes(search.toLowerCase());
-    })
-    if(genre) {
-      AlbumsAfterFilter = AlbumsAfterFilter.filter(album => {
-        return album.genre.includes(genre) || genre === 'all';
-      })
-    }
-    if(selected_artist) {
-      AlbumsAfterFilter = AlbumsAfterFilter.filter(album => {
-        return album.artist.includes(selected_artist) || selected_artist === 'all';
-      })
-    }
-    return AlbumsAfterFilter.sort((a, b) => a.title.localeCompare(b.title));
-  }, [search, genre, selected_artist]);
+    return albums
+      .filter(album => 
+        album.title.toLowerCase().includes(search.toLowerCase()) ||
+        album.artist.toLowerCase().includes(search.toLowerCase())
+      )
+      .filter(album => genre === 'all' || album.genre.includes(genre))
+      .filter(album => selectedArtist === 'all' || album.artist.includes(selectedArtist))
+      .sort((a, b) => a.title.localeCompare(b.title));
+  }, [search, genre, selectedArtist]);
 
   /* FILTER THE SONGS */
   const filteredSongs = useMemo(() => {
-    let SongsAfterFilter = songs.filter(song => {
-      return song.title.toLowerCase().includes(search.toLowerCase()) || song.artist.name.toLowerCase().includes(search.toLowerCase()) || song.album.toLowerCase().includes(search.toLowerCase());
-    })
-    if(genre) {
-      SongsAfterFilter = SongsAfterFilter.filter(song => {
-        return song.genre.includes(genre) || genre === 'all';
-      })
-    }
-    if(selected_artist) {
-      SongsAfterFilter = SongsAfterFilter.filter(song => {
-        return song.artist.name.includes(selected_artist) || selected_artist === 'all';
-      })
-    }
-    return SongsAfterFilter.sort((a, b) => a.album.localeCompare(b.album));
-  }, [search, genre, selected_artist]);
+    return songs
+      .filter(song => 
+        song.title.toLowerCase().includes(search.toLowerCase()) ||
+        song.artist.name.toLowerCase().includes(search.toLowerCase()) ||
+        song.album.toLowerCase().includes(search.toLowerCase())
+      )
+      .filter(song => genre === 'all' || song.genre.includes(genre))
+      .filter(song => selectedArtist === 'all' || song.artist.name.includes(selectedArtist))
+      .sort((a, b) => a.album.localeCompare(b.album));
+  }, [search, genre, selectedArtist]);
 
 
   /* DISPLAY FAVORITES */
@@ -118,6 +100,7 @@ export default function Favorites() {
         <h2>Songs</h2>
         <div className="line" style={{marginLeft: '1rem'}} ></div>
       </div>
+
       <SongCardTitle />
       <div className="flex-column" id="songs">
           {filteredSongs.length === 0 ? (

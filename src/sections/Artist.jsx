@@ -25,14 +25,12 @@ export default function Artist() {
       favoriteArtists = favoriteArtists.filter((fav) => String(fav.id) !== String(id));
       optionsOfArtists = optionsOfArtists.filter((art) => art !== artist.name);
       setIsFavorite(false);
-    } else {
-      if (artist) {
-        favoriteArtists.push(artist);
-        if (!optionsOfArtists.includes(artist.name)) {
-          optionsOfArtists.push(artist.name);
-        }
-        setIsFavorite(true);
+    } else if (artist) {
+      favoriteArtists.push(artist);
+      if (!optionsOfArtists.includes(artist.name)) {
+        optionsOfArtists.push(artist.name);
       }
+      setIsFavorite(true);
     }
     localStorage.setItem("artists", JSON.stringify(favoriteArtists));
     localStorage.setItem("optionsOfArtists", JSON.stringify(optionsOfArtists));

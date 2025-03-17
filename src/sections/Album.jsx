@@ -31,15 +31,13 @@ export default function Album() {
       favoriteAlbums = favoriteAlbums.filter((fav) => String(fav.id) !== String(id));
       optionsOfArtists = optionsOfArtists.filter((art) => art !== artist.name);
       setIsFavorite(false);
-    } else {
-      if (album) {
+    } else if (album) {
         favoriteAlbums.push(album);
         if (!optionsOfArtists.includes(artist.name)) {
           optionsOfArtists.push(artist.name);
         }
         setIsFavorite(true);
       }
-    }
     localStorage.setItem("albums", JSON.stringify(favoriteAlbums));
     localStorage.setItem("optionsOfArtists", JSON.stringify(optionsOfArtists));
   };
