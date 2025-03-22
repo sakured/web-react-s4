@@ -19,12 +19,22 @@ export default function Artist() {
   /* UPDATE THE LIST OF FAVORITE ARTISTS */
   const handleFavoriteClick = () => {
     let favoriteArtists = JSON.parse(localStorage.getItem("artists")) || [];
+    let favoriteAlbums = JSON.parse(localStorage.getItem("albums")) || [];
+    let favoriteSongs = JSON.parse(localStorage.getItem("songs")) || [];
     let optionsOfArtists = JSON.parse(localStorage.getItem("optionsOfArtists")) || [];
 
     if (isFavorite) {
       favoriteArtists = favoriteArtists.filter((fav) => String(fav.id) !== String(id));
-      optionsOfArtists = optionsOfArtists.filter((art) => art !== artist.name);
       setIsFavorite(false);
+
+      // IF THE ARTIST IN NOT IN ANY FAVORITE ALBUMS / SONGS, REMOVE IT FROM THE OPTIONS
+      const isArtistReferenced = 
+        favoriteArtists.some(a => a.name?.toLowerCase() === artist.name.toLowerCase()) || 
+        favoriteAlbums.some(album => album.artist?.toLowerCase() === artist.name.toLowerCase()) ||
+        favoriteSongs.some(song => song.artist?.name?.toLowerCase() === artist.name.toLowerCase());
+      if (!isArtistReferenced) {
+        optionsOfArtists = optionsOfArtists.filter(art => art !== artist.name);
+      }
     } else if (artist) {
       favoriteArtists.push(artist);
       if (!optionsOfArtists.includes(artist.name)) {
@@ -33,7 +43,7 @@ export default function Artist() {
       setIsFavorite(true);
     }
     localStorage.setItem("artists", JSON.stringify(favoriteArtists));
-    localStorage.setItem("optionsOfArtists", JSON.stringify(optionsOfArtists));
+    localStorage.setItem("optionsOfArtists", JSON.stringify(optionsOfArtists.sort((a, b) => a.localeCompare(b))));
   };
 
   /* LOAD ARTIST INFORMATION */
