@@ -39,6 +39,7 @@ export default function ArtistPresentation({artist, isFavorite, setIsFavorite, i
   };
 
 
+  /* DISPLAY ARTIST PRESENTATION */
   return (
     <div id="presentation" className="flex-row">
       <img src={artist.picture_big} style={pictureStyle} alt={artist.name} />
@@ -56,6 +57,7 @@ export default function ArtistPresentation({artist, isFavorite, setIsFavorite, i
     </div>
   )
 }
+
 
 const artistStyle = {
   fontSize: '3rem',
