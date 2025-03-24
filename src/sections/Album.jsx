@@ -1,3 +1,4 @@
+import { getAlbumById, getArtistByName, getSongsFromAlbumTitle } from './../utils/utils.js';
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
@@ -6,7 +7,7 @@ export default function Album() {
   const [artist, setArtist] = useState(null);
   const [album, setAlbum] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [songs, setsongs] = useState([]);
+  const [songs, setSongs] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
 
@@ -84,13 +85,8 @@ export default function Album() {
   /* LOAD ALBUM INFORMATION */
   useEffect(() => {
     setIsLoading(true);
-    fetch("/database/albums.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const foundAlbum = data.find((album) => String(album.id) === String(id));
-        setAlbum(foundAlbum);
-      })
-      .catch((error) => console.error("LOADING ERROR:", error))
+      getAlbumById(id)
+      .then((data) => setAlbum(data))
       .finally(() => setIsLoading(false));
   }, [id]);
 
@@ -98,26 +94,16 @@ export default function Album() {
   useEffect(() => {
     if (!album) return; 
     setIsLoading(true);
-    fetch("/database/artists.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const foundArtist = data.find((artist) => String(artist.name) === String(album.artist));
-        setArtist(foundArtist);
-      })
-      .catch((error) => console.error("LOADING ERROR:", error))
+    getArtistByName(album.artist)
+      .then((data) => setArtist(data))
       .finally(() => setIsLoading(false));
   }, [album]); 
 
-  /* GET THE SONGS OF THE ALBUM WHEN ALBUM IS DEFINED */
+  /* GET THE SONGS OF THE ALBUM */
   useEffect(() => {
     if (!album) return;
-    fetch("/database/tracks.json") 
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredData = data.filter((song) => String(song.album) === String(album.title));
-        setsongs(filteredData.sort((a, b) => new Date(b.release_date) - new Date(a.release_date)));
-      })
-      .catch((error) => console.error("Erreur de chargement :", error));
+    getSongsFromAlbumTitle(album.title)
+      .then((data) => setSongs(data.sort((a, b) => new Date(b.release_date) - new Date(a.release_date))))
   }, [album]);
 
   /* HANDLE LOADING STATE */

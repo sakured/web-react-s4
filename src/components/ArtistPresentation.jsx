@@ -3,10 +3,10 @@ import { useEffect } from "react";
 export default function ArtistPresentation({artist, isFavorite, setIsFavorite, id}) {
 
   /* CHECK IF THE ARTIST IS A FAVORITE */
-    useEffect(() => {
-      const favoriteArtists = JSON.parse(localStorage.getItem("artists")) || [];
-      setIsFavorite(favoriteArtists.some((fav) => String(fav.id) == String(id)));
-    }, [id]);
+  useEffect(() => {
+    const favoriteArtists = JSON.parse(localStorage.getItem("artists")) || [];
+    setIsFavorite(favoriteArtists.some((fav) => String(fav.id) == String(id)));
+  }, [id]);
 
   /* UPDATE THE LIST OF FAVORITE ARTISTS */
   const handleFavoriteClick = () => {
