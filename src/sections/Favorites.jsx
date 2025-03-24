@@ -59,6 +59,7 @@ export default function Favorites() {
     <div className="content" style={{marginBottom: '3rem'}}>
       <h1 className="center">MY FAVORITES</h1>  
       <FavoritesFilterBanner setSearch={setSearch} setGenre={setGenre} setArtist={setArtist} artists={optionsOfArtists}/>
+      
 
       <div className='flex-row space-between align-center'>
         <h2>Artists</h2>

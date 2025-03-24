@@ -97,7 +97,6 @@ export default function Album() {
   /* LOAD ARTIST INFORMATION */
   useEffect(() => {
     if (!album) return; 
-  
     setIsLoading(true);
     fetch("/database/artists.json")
       .then((response) => response.json())
