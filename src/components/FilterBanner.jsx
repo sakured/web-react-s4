@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FilterBanner({setSearch, setGenre, setType, isFavorites, setFavorites}) {
+export default function FilterBanner({setSearch, genre, setGenre, setType, isFavorites, setFavorites}) {
   const [selectedType, setSelectedType] = useState("artists");
 
   /* CHANGE THE STATE OF THE TYPE */
@@ -14,7 +14,7 @@ export default function FilterBanner({setSearch, setGenre, setType, isFavorites,
       <div id="select-filter" className="flex-row align-center">
         <input type="search" placeholder="Search for artists, songs..." onChange={(e) => setSearch(e.target.value)}></input>
 
-        <select onChange={(e) => setGenre(e.target.value)}>
+        <select onChange={(e) => setGenre(e.target.value)} value={genre}>
           <option value="all">All genres</option>
           <option value="pop">Pop</option>
           <option value="k-pop">K-pop</option>

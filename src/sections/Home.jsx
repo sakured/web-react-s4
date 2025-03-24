@@ -84,7 +84,7 @@ export default function Home() {
   } else if (type === 'albums') {
     return (
       <div className="content" id="home">
-          <FilterBanner setSearch={setSearch} setGenre={setGenre} setType={setType} isFavorites={favorites} setFavorites={setFavorites}/>
+          <FilterBanner setSearch={setSearch} genre={genre} setGenre={setGenre} setType={setType} isFavorites={favorites} setFavorites={setFavorites}/>
 
         <div className="wrap justify-center" id="albums">
           {filteredAlbums.length === 0 ? (
